@@ -79,6 +79,33 @@
     .header {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
+    .hours-card {
+      background-color: #4488ef;
+      color: #ffffff;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hours-card h3 {
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.5rem;
+    }
+
+    .hours-card ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hours-card li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .hours-card li:last-child {
+      border-bottom: none;
+    }
   </style>
 </head>
 
@@ -100,238 +127,4 @@
           <li><a href="#discounts" class="hover:underline hover:text-tertiary">Discounts</a></li>
           <li><a href="#contact" class="hover:underline hover:text-tertiary">Contact</a></li>
         </ul>
-        <button id="mobile-menu-button" class="md:hidden text-secondary hover:text-tertiary">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </nav>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-primary rounded-md shadow-md">
-      <ul class="flex flex-col items-center space-y-2 p-4">
-        <li><a href="#home" class="hover:underline hover:text-tertiary">Home</a></li>
-        <li><a href="#about" class="hover:underline hover:text-tertiary">About Us</a></li>
-        <li><a href="#gallery" class="hover:underline hover:text-tertiary">Gallery</a></li>
-        <li><a href="#hours" class="hover:underline hover:text-tertiary">Hours</a></li>
-        <li><a href="#menu" class="hover:underline hover:text-tertiary">Menu</a></li>
-        <li><a href="#reviews" class="hover:underline hover:text-tertiary">Reviews</a></li>
-        <li><a href="#discounts" class="hover:underline hover:text-tertiary">Discounts</a></li>
-        <li><a href="#contact" class="hover:underline hover:text-tertiary">Contact</a></li>
-      </ul>
-    </div>
-  </header>
-  <section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('assets/images/background/current.jpg');">
-    <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Welcome to Spinners Pizza!</h2>
-      <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!</p>
-      <a href="#menu" class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our Menu</a>
-    </div>
-  </section>
-  <section id="about" class="py-12 bg-gray-50">
-    <div class="container mx-auto text-center px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">About Spinners Pizza</h3>
-      <p class="text-base sm:text-lg">At Spinners Pizza, our passion is crafting delicious pizzas and other menu items with the finest ingredients. Our commitment to quality and community drives us to serve you every day.</p>
-      <p class="mt-4 text-base sm:text-lg">We proudly offer discounts to our heroes – service members, police officers, firefighters, and first responders – as a thank you for their dedication.</p>
-    </div>
-  </section>
-  <section class="py-12 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row md:space-x-8">
-        <div id="hours" class="md:w-1/3 bg-tertiary p-6 rounded-md shadow-md mb-8 md:mb-0 text-secondary">
-          <h3 class="text-xl sm:text-2xl font-bold mb-4">Winter Hours</h3>
-          <ul class="text-sm sm:text-base space-y-2">
-            <li>Monday: 11am - 8pm</li>
-            <li>Tuesday: 11am - 8pm</li>
-            <li>Wednesday: 11am - 3pm</li>
-            <li>Thursday: 11am - 8pm</li>
-            <li>Friday: 11am - 8pm</li>
-            <li>Saturday: 11am - 8pm</li>
-            <li>Sunday: 11am - 6pm</li>
-          </ul>
-          <p class="mt-4 font-semibold text-xs">Please note that these are our winter operating hours. Check back for updates on our regular hours.</p>
-        </div>
-        <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md">
-          <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
-          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="assets/images/restaurant/02 walking in from front door looking at the dining room.jpg" alt="Walking into Dining Room" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
-            <img src="assets/images/restaurant/03 straight from the entrance looking at the counter.jpg" alt="Looking at the Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
-            <img src="assets/images/restaurant/04 view from counter looking at the door to the restaurant and the restrooms.jpg" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
-            <img src="assets/images/restaurant/05 view of dining room from the counter.jpg" alt="Dining Room from Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
-            <img src="assets/images/restaurant/06 dining area.jpg" alt="Dining Area 1" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
-            <img src="assets/images/restaurant/07 dining area.jpg" alt="Dining Area 2" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
-            <img src="assets/images/restaurant/08 dining area.jpg" alt="Dining Area 3" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="menu" class="py-12 bg-tertiary-light">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">🇺🇸 Welcome to Our All-American Menu 🇺🇸</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">House Specials</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Chicken Alfredo</li>
-            <li>Homemade Lasagna</li>
-            <li>Fried Fish (Served 7 Days a Week)</li>
-            <li>Fried Frog Legs (Served 7 Days a Week)</li>
-          </ul>
-
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Appetizers</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Mac 'n Cheese Bacon Nuggets</li>
-            <li>Jalapeño Poppers</li>
-            <li>Mozzarella Sticks</li>
-            <li>Chicken Wings</li>
-            <li>Garlic Breadsticks</li>
-            <li>Garlic Cheese Bread</li>
-          </ul>
-
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Salads</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Side Salad</li>
-            <li>Chef Salad</li>
-            <li>Fajita Chicken Salad</li>
-            <li>Taco Salad</li>
-          </ul>
-        </div>
-
-        <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">Create Your Own Pizza</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Original Hand Tossed</li>
-            <li>Gluten-Free</li>
-            <li>Add Your Favorite Toppings</li>
-          </ul>
-
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Specialty Pizzas</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>A-1 Steak Pizza</li>
-            <li>Bacon Cheeseburger Pizza</li>
-            <li>BBQ Chicken Pizza</li>
-            <li>Hawaiian Pizza</li>
-            <li>Cheesy Potato Delight</li>
-            <li>Alfredo Chicken Pizza</li>
-          </ul>
-
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Burgers</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Spinner Special Smoked Burger</li>
-            <li>Radar Burger</li>
-            <li>Hawaiian Burger</li>
-            <li>Big & Wolf Burger</li>
-          </ul>
-
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Desserts & Drinks</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Cookies</li>
-            <li>Fountain Drinks</li>
-            <li>Bottled Beverages</li>
-          </ul>
-        </div>
-      </div>
-      <div class="text-center mt-8 text-blue-600 font-bold">
-        <span class="text-red-600">★</span> Famous for Fried Fish & Frog Legs <span class="text-red-600">★</span>
-      </div>
-    </div>
-  </section>
-  <section id="reviews" class="py-12 bg-gray-50">
-    <div class="container mx-auto text-center px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Customer Reviews</h3>
-      <p class="text-base sm:text-lg mb-6">Read what our customers have to say! <span class="font-semibold">(10 Reviews)</span></p>
-      <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
-        <a href="https://www.restaurantji.com/mo/grovespring/spinners-pizza-/" target="_blank" class="text-tertiary hover:underline">View on Restaurantji</a>
-        <div id="review-carousel" class="flex transition-transform duration-1000 ease-in-out">
-          <div class="min-w-full flex-shrink-0 p-6">
-            <div class="bg-white p-6 rounded-md shadow-md h-full flex flex-col">
-              <blockquote class="italic text-base sm:text-lg mb-4 flex-grow">"Had the debris pizza, it was terrific..."</blockquote>
-              <div>
-                <p class="font-semibold">- Bill Kaferstein, September 2024 on Google</p>
-                <div class="mt-2 text-sm">
-                  <p>Atmosphere: 4</p>
-                  <p>Food: 4</p>
-                  <p>Service: 4</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="min-w-full flex-shrink-0 p-6">
-            <div class="bg-white p-6 rounded-md shadow-md h-full flex flex-col">
-              <blockquote class="italic text-base sm:text-lg mb-4 flex-grow">"Had a supreme pizza that was delicious."</blockquote>
-              <div>
-                <p class="font-semibold">- Ronnie Long, September 2024 on Google</p>
-                <div class="mt-2 text-sm">
-                  <p>Atmosphere: 3</p>
-                  <p>Food: 5</p>
-                  <p>Service: 4</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="discounts" class="py-12 bg-primary text-secondary">
-    <div class="container mx-auto text-center px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Discounts for Our Heroes</h3>
-      <p class="text-base sm:text-lg">We honor our service members, police officers, firefighters, and first responders with special discounts as a token of our appreciation.</p>
-    </div>
-  </section>
-  <section id="contact" class="py-12 bg-white">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come On Out<br>&<br>Get Some All-American Food!</h3>
-      <div class="text-center">
-        <p class="mb-2">Everyone and anyone is welcome here at Spinners!</p>
-        <p class="mb-2">Address: 9537 MO-5, Grovespring, MO 65662</p>
-        <p class="mb-2">(417) 462-7746</p>
-        <div class="w-full h-64 sm:h-96 mt-6">
-          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading=""></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="bg-gray-800 text-secondary text-center p-4">
-    <p>© 2024 Spinners Pizza. All rights reserved.</p>
-  </footer>
-  <script>
-    const logo = document.getElementById('logo');
-    let lastLogoNumber = 0;
-    const setRandomLogo = () => {
-      let logoNumber;
-      do {
-        logoNumber = Math.floor(Math.random() * 13) + 1;
-      } while (logoNumber === lastLogoNumber);
-      lastLogoNumber = logoNumber;
-      logo.src = `assets/images/logos/${logoNumber}.png`;
-    };
-    setRandomLogo();
-    setInterval(setRandomLogo, 4000);
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuButton.addEventListener('click', (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle('hidden');
-    });
-    document.addEventListener('click', (event) => {
-      if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-    document.addEventListener('DOMContentLoaded', () => {
-      const carouselInner = document.getElementById('review-carousel');
-      const totalSlides = carouselInner.children.length;
-      let currentSlide = 0;
-      const goToNextSlide = () => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-      };
-      setInterval(goToNextSlide, 5000);
-    });
-  </script>
-</body>
-
-</html>
+        <button id="mobile-menu-button" class="
