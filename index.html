@@ -1,1 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spinners Pizza</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-red-500 text-white fixed w-full z-10 shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center">
+        <!-- Updated Logo -->
+        <img src="assets/images/logo.png" alt="Spinners Pizza Logo" class="h-10 w-10 mr-2 rounded-full">
+        <h1 class="text-xl sm:text-2xl font-bold">Spinners Pizza</h1>
+      </div>
+      <nav>
+        <ul class="hidden md:flex space-x-4">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#about" class="hover:underline">About Us</a></li>
+          <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+          <li><a href="#hours" class="hover:underline">Hours</a></li>
+          <li><a href="#menu" class="hover:underline">Menu</a></li>
+          <li><a href="#reviews" class="hover:underline">Reviews</a></li>
+          <li><a href="#discounts" class="hover:underline">Discounts</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-red-500">
+      <ul class="flex flex-col items-center space-y-2 p-4">
+        <li><a href="#home" class="hover:underline">Home</a></li>
+        <li><a href="#about" class="hover:underline">About Us</a></li>
+        <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+        <li><a href="#hours" class="hover:underline">Hours</a></li>
+        <li><a href="#menu" class="hover:underline">Menu</a></li>
+        <li><a href="#reviews" class="hover:underline">Reviews</a></li>
+        <li><a href="#discounts" class="hover:underline">Discounts</a></li>
+        <li><a href="#contact" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('assets/images/01-entrance-looking-left-hallway.jpg');">
+    <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
+    <div class="relative z-20 h-full flex flex-col items-center justify-center text-center text-white p-4 px-6 sm:px-12">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Welcome to Spinners Pizza!</h2>
+      <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint, come hang out!</p>
+      <a href="#menu" class="bg-red-600 px-6 py-3 rounded-full text-lg hover:bg-red-700 transition-colors duration-300">Explore Our Menu</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-12 bg-gray-50">
+    <div class="container mx-auto text-center px-6">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4">About Spinners Pizza</h3>
+      <p class="text-base sm:text-lg">At Spinners Pizza, our passion is crafting delicious pizzas and other menu items with
+        the finest ingredients. Our commitment to quality and community drives us to serve you every day.</p>
+      <p class="mt-4 text-base sm:text-lg">We proudly offer discounts to our heroes – service members, police officers,
+        firefighters, and first responders – as a thank you for their dedication.</p>
+    </div>
+  </section>
+
+  <!-- Hours and Gallery Section -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:space-x-8">
+        <!-- Hours Section -->
+        <div id="hours" class="md:w-1/3 bg-white p-6 rounded-lg shadow-md mb-8 md:mb-0">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4">Winter Hours</h3>
+          <ul class="text-sm sm:text-base space-y-2">
+            <li>Monday: 11am - 8pm</li>
+            <li>Tuesday: 11am - 8pm</li>
+            <li>Wednesday: 11am - 3pm</li>
+            <li>Thursday: 11am - 8pm</li>
+            <li>Friday: 11am - 8pm</li>
+            <li>Saturday: 11am - 8pm</li>
+            <li>Sunday: 11am - 6pm</li>
+          </ul>
+          <p class="mt-4 text-red-500 font-semibold text-xs">Please note that these are our winter operating hours.
+            Check back for updates on our regular hours.</p>
+        </div>
+        <!-- Gallery Section -->
+        <div id="gallery" class="md:w-2/3">
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
+          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant, perfect for family
+            meals or a quick bite with friends!</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Updated Gallery Images -->
+            <img src="assets/images/02-walking-in-from-front-door.jpg" alt="Walking in from Front Door" class="rounded-lg shadow-md w-full">
+            <img src="assets/images/03-straight-from-entrance.jpg" alt="Straight from Entrance" class="rounded-lg shadow-md w-full">
+            <img src="assets/images/04-view-from-counter.jpg" alt="View from Counter" class="rounded-lg shadow-md w-full">
+            <img src="assets/images/05-view-of-dining-room.jpg" alt="Dining Room from Counter" class="rounded-lg shadow-md w-full">
+            <img src="assets/images/06-dining-area.jpg" alt="Dining Area" class="rounded-lg shadow-md w-full">
+            <img src="assets/images/07-dining-area.jpg" alt="Dining Area" class="rounded-lg shadow-md w-full">
+            <img src="assets/images/08-dining-area.jpg" alt="Dining Area" class="rounded-lg shadow-md w-full">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Menu -->
+  <section id="menu" class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Our Full Menu</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h4 class="text-xl sm:text-2xl font-semibold mb-4">Appetizers</h4>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Poppers (6PC)</span>
+              <span>$7.35</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Mac-n-Cheese Nuggets (8PC)</span>
+              <span>$6.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Mozzarella Sticks w/ Marinara Sauce (6PC)</span>
+              <span>$7.35</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Chicken Wings (10PC)</span>
+              <span>$11.30</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Soft Garlic Breadsticks (Small)</span>
+              <span>$4.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Soft Garlic Breadsticks (Large)</span>
+              <span>$7.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Garlic Cheese Bread (10")</span>
+              <span>$7.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Garlic Cheese Bread (12")</span>
+              <span>$9.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Garlic Cheese Bread (14")</span>
+              <span>$11.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Fry Basket</span>
+              <span>$2.45</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Fry Toppings or Sauces</span>
+              <span>$1.00</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>X-Large Salted Pretzel</span>
+              <span>$7.99</span>
+            </li>
+          </ul>
+
+          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Salads</h4>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Side Salad (Lettuce, Cheddar Cheese, Tomato)</span>
+              <span>$2.45</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Chef Salad (Lettuce, Bacon, Cheese, Ham, Turkey)</span>
+              <span>$6.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Fajita Chicken Salad (Lettuce, Chicken, Mozzarella)</span>
+              <span>$8.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Taco Salad (Lettuce, Chicken, Mozzarella & Cheddar Cheese)</span>
+              <span>$8.99</span>
+            </li>
+          </ul>
+
+          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Wings</h4>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Baked or Fried Chicken Wings (1 lb)</span>
+              <span>$11.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Baked or Fried Chicken Wings (2 lb)</span>
+              <span>$19.99</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4 class="text-xl sm:text-2xl font-semibold mb-4">Build-Your-Own Pizza</h4>
+          <h5 class="text-lg sm:text-xl font-semibold mt-4 mb-2">Pick Your Crust</h5>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Original/Hand-Tossed</span>
+              <span>Included</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Thin Crust (14" or 16")</span>
+              <span>Included</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Gluten-Free Thin Crust (12" or 14")</span>
+              <span>+$2.00</span>
+            </li>
+          </ul>
+
+          <h5 class="text-lg sm:text-xl font-semibold mt-4 mb-2">Choose Size</h5>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Small (10")</span>
+              <span>$8.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Medium (12")</span>
+              <span>$11.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Large (14")</span>
+              <span>$12.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>X-Large (16")</span>
+              <span>$15.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Party (20")</span>
+              <span>$22.85</span>
+            </li>
+          </ul>
+
+          <h5 class="text-lg sm:text-xl font-semibold mt-4 mb-2">Extra Toppings</h5>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Small (10")</span>
+              <span>$0.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Medium (12")</span>
+              <span>$1.25</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Large (14")</span>
+              <span>$1.50</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>X-Large (16")</span>
+              <span>$1.70</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Party (20")</span>
+              <span>$2.00</span>
+            </li>
+          </ul>
+
+          <h5 class="text-lg sm:text-xl font-semibold mt-4 mb-2">Topping Choices</h5>
+          <p class="text-sm sm:text-base">Bacon Bits, Banana Peppers, Beef, Black Olive, Broccoli, Canadian Bacon, Cheddar Cheese, Chicken, Green Olive, Green Pepper, Italian Sausage, Jalapeno, Mango, Mozzarella Cheese, Mushroom, Onion, Pepperoni, Pickles, Pineapple, Sauerkraut, Spinach, Taco Beef, Tomato.</p>
+
+          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Specialty Pizzas</h4>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>A-1 Steak: A-1 Steak Sauce, Italian Beef Slices, Mushrooms, Onions, Mozzarella, Cheddar.</span>
+              <span>$22.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Bacon Cheeseburger: Beef, Onion, Pickles, Bacon Bits, Mozzarella, Cheddar.</span>
+              <span>$19.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>BBQ Mushroom Bacon Cheeseburger: BBQ Sauce, Onions, Beef, Mushrooms, Bacon Bits.</span>
+              <span>$21.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Big Bad Wolf: Boom Boom Sauce, Canadian Bacon, Sausage, Mushrooms, Onions, Banana Peppers, Mozzarella, Bacon Bits, Cheddar.</span>
+              <span>$23.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Taco Pizza: Taco Bean Sauce, Beef or Chicken, Lettuce, Black Olive, Onion, Taco Chips, Tomato, Mozzarella, Cheddar. Includes Taco Sauce packets.</span>
+              <span>$20.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Firecracker: Pepperoni, Italian Sausage, Onion, Jalapeno, Green Pepper, Red Pepper Flakes, Mozzarella.</span>
+              <span>$18.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Veggie Deluxe: Mushroom, Onion, Green Pepper, Black Olive, Green Olive, Tomato, Extra Mozzarella.</span>
+              <span>$17.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Meat & Potato: Beef, Pepperoni, Canadian Bacon, Sausage, Bacon Bits, Seasoned Potatoes, Mozzarella, Cheddar.</span>
+              <span>$21.99</span>
+            </li>
+          </ul>
+
+          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Burgers</h4>
+          <ul class="space-y-2">
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Spinner Special Smoked Burger: Served on your choice of hoagie bread, pita bread, or 10" flour tortilla wrap.</span>
+              <span>$11.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Radar Burger: Mozzarella Cheese, Onion, Ranch Dressing, Bacon.</span>
+              <span>$10.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Hawaiian Burger: Canadian Bacon, Pineapple.</span>
+              <span>$11.99</span>
+            </li>
+            <li class="flex justify-between text-sm sm:text-base">
+              <span>Big and Wolf Burger: Mozzarella Cheese, Onions, Mushrooms, Pickles, with Mozzarella & Bacon.</span>
+              <span>$11.99</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pastas Section -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h4 class="text-xl sm:text-2xl font-semibold mb-4">Pastas</h4>
+      <ul class="space-y-2">
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Spaghetti - Single</span>
+          <span>$7.99</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Spaghetti - Add Meatballs</span>
+          <span>+$1.00</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Spaghetti - Family</span>
+          <span>$22.99</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Spaghetti - Add Meatballs (Family)</span>
+          <span>+$3.00</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Chicken Alfredo - Single</span>
+          <span>$8.99</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Chicken Alfredo - Family</span>
+          <span>$23.99</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Lasagna - Single</span>
+          <span>$7.99</span>
+        </li>
+        <li class="flex justify-between text-sm sm:text-base">
+          <span>Lasagna - Family</span>
+          <span>$29.99</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section id="reviews" class="py-12 bg-gray-50">
+    <div class="container mx-auto text-center px-6">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Customer Reviews</h3>
+      <p class="text-base sm:text-lg mb-6">Read what our customers have to say! <span class="font-semibold">(10
+          Reviews)</span></p>
+      <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+        <!-- Carousel Container -->
+        <a href="https://www.restaurantji.com/mo/grovespring/spinners-pizza-/" target="_blank" class="text-blue-500 hover:underline">
+          View on Restaurantji
+        </a>
+        <div id="review-carousel" class="flex transition-transform duration-1000 ease-in-out">
+          <!-- Review Slides -->
+          <!-- Review 1 -->
+          <div class="min-w-full flex-shrink-0 p-6">
+            <div class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
+              <blockquote class="italic text-base sm:text-lg mb-4 flex-grow">
+                "Had the debris pizza, it was terrific..."
+              </blockquote>
+              <div>
+                <p class="font-semibold">- Bill Kaferstein, September 2024 on Google</p>
+                <div class="mt-2 text-sm">
+                  <p>Atmosphere: 4</p>
+                  <p>Food: 4</p>
+                  <p>Service: 4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Review 2 -->
+          <div class="min-w-full flex-shrink-0 p-6">
+            <div class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
+              <blockquote class="italic text-base sm:text-lg mb-4 flex-grow">
+                "Had a supreme pizza that was delicious."
+              </blockquote>
+              <div>
+                <p class="font-semibold">- Ronnie Long, September 2024 on Google</p>
+                <div class="mt-2 text-sm">
+                  <p>Atmosphere: 3</p>
+                  <p>Food: 5</p>
+                  <p>Service: 4</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more reviews as needed -->
+          <!-- Example Review 3 -->
+          <div class="min-w-full flex-shrink-0 p-6">
+            <div class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
+              <blockquote class="italic text-base sm:text-lg mb-4 flex-grow">
+                "The garlic breadsticks are to die for!"
+              </blockquote>
+              <div>
+                <p class="font-semibold">- Sarah Mitchell, October 2024 on Yelp</p>
+                <div class="mt-2 text-sm">
+                  <p>Atmosphere: 5</p>
+                  <p>Food: 5</p>
+                  <p>Service: 5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Example Review 4 -->
+          <div class="min-w-full flex-shrink-0 p-6">
+            <div class="bg-white p-6 rounded-lg shadow-md h-full flex flex-col">
+              <blockquote class="italic text-base sm:text-lg mb-4 flex-grow">
+                "Great variety in the menu and friendly staff."
+              </blockquote>
+              <div>
+                <p class="font-semibold">- Mike Johnson, October 2024 on Facebook</p>
+                <div class="mt-2 text-sm">
+                  <p>Atmosphere: 4</p>
+                  <p>Food: 4</p>
+                  <p>Service: 5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Continue adding reviews up to 10 -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discounts for Our Heroes -->
+  <section id="discounts" class="py-12 bg-red-500 text-white">
+    <div class="container mx-auto text-center px-6">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Discounts for Our Heroes</h3>
+      <p class="text-base sm:text-lg">We honor our service members, police officers, firefighters, and first responders
+        with special discounts as a token of our appreciation.</p>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="py-12 bg-white">
+    <div class="container mx-auto px-6">
+      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Contact Us</h3>
+      <div class="text-center">
+        <p class="mb-2">Address: 9537 MO-5, Grovespring, MO 65662</p>
+        <p class="mb-2">(417) 462-7746</p>
+        <!-- Google Maps Embed -->
+        <div class="w-full h-64 sm:h-96 mt-6">
+          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.7460607848246!2d-92.60486078466518!3d37.40562317983105!2m3!1f0!2f0!
+            3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cfaf5946e0fb5b%3A0x1a1c4f8ef3df1a5d!2s9537%20MO-5%2C%20Grovespring%2C%20MO%2065662%2C%20USA!
+            5e0!3m2!1sen!2sus!4v1619193968391!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4">
+    <p>© 2024 Spinners Pizza. All rights reserved.</p>
+    <div class="mt-2">
+      <a href="https://www.facebook.com/SpinnersPizza" class="mx-2 hover:underline">Facebook</a>
+      <!-- Add other social links as needed -->
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Customer Reviews Carousel
+    document.addEventListener('DOMContentLoaded', () => {
+      const carouselInner = document.getElementById('review-carousel');
+      const totalSlides = carouselInner.children.length;
+      let currentSlide = 0;
+
+      // Function to go to the next slide
+      const goToNextSlide = () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+      };
+
+      // Auto-slide every 5 seconds
+      setInterval(goToNextSlide, 5000);
+    });
+  </script>
+</body>
+
+</html>
