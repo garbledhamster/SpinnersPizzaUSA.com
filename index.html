@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,24 +30,14 @@
   </script>
   <style>
     @keyframes rotate-logo {
-      from {
-        transform: rotateY(0deg);
-      }
-      to {
-        transform: rotateY(360deg);
-      }
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
     }
-
-    .animate-rotate {
-      animation: rotate-logo 4s linear infinite;
-      transform-style: preserve-3d;
-    }
-
-    .logo-container {
-      perspective: 1000px;
-    }
+    .animate-rotate { animation: rotate-logo 4s linear infinite; transform-style: preserve-3d; }
+    .logo-container { perspective: 1000px; }
   </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-primary text-secondary fixed w-full z-30 shadow-md overflow-visible">
     <div class="container mx-auto flex justify-between items-center p-4 relative">
@@ -89,7 +80,7 @@
     <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
     <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Welcome to Spinners Pizza!</h2>
-      <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint, come hang out!</p>
+      <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!</p>
       <a href="#menu" class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our Menu</a>
     </div>
   </section>
@@ -118,15 +109,15 @@
         </div>
         <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md">
           <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
-          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant, perfect for family meals or a quick bite with friends!</p>
+          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="assets/images/restaurant/03 straight from the entrance looking at the counter.jpg" alt="Looking at the Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
             <img src="assets/images/restaurant/02 walking in from front door looking at the dining room.jpg" alt="Walking into Dining Room" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
+            <img src="assets/images/restaurant/03 straight from the entrance looking at the counter.jpg" alt="Looking at the Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
+            <img src="assets/images/restaurant/04 view from counter looking at the door to the restaurant and the restrooms.jpg" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
             <img src="assets/images/restaurant/05 view of dining room from the counter.jpg" alt="Dining Room from Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
             <img src="assets/images/restaurant/06 dining area.jpg" alt="Dining Area 1" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
             <img src="assets/images/restaurant/07 dining area.jpg" alt="Dining Area 2" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
             <img src="assets/images/restaurant/08 dining area.jpg" alt="Dining Area 3" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
-            <img src="assets/images/restaurant/04 view from counter looking at the door to the restaurant and the restrooms.jpg" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
           </div>
         </div>
       </div>
@@ -134,77 +125,74 @@
   </section>
   <section id="menu" class="py-12 bg-tertiary-light">
     <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Our Full Menu</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-tertiary-light p-6 rounded-md shadow-md">
-          <h4 class="text-xl sm:text-2xl font-semibold mb-4">Appetizers</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>Mac 'n Cheese Bacon Nuggets</span><span>$6.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Jalapeño Poppers (6 pieces)</span><span>$6.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Mozzarella Sticks with Marinara Sauce</span><span>$7.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Fried Chicken Wings (6 pcs)</span><span>$7.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Fried Chicken Wings (12 pcs)</span><span>$12.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Garlic Breadsticks (Single Order)</span><span>$4.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Garlic Breadsticks (Three Orders)</span><span>$7.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>12" Garlic Cheese Bread</span><span>$6.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>12" Garlic Cheese Bread (Fundraiser Slice)</span><span>$4.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>12" Garlic Cheese Bread (Half)</span><span>$4.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>12" Garlic Cheese Bread (Full)</span><span>$6.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>12" Garlic Cheese Bread (Additional Dipping Sauce)</span><span>$0.99</span></li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Salads</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>Side Salad (Lettuce, Cheddar Cheese, Tomato)</span><span>$2.45</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Chef Salad (Lettuce, Bacon, Cheese, Ham, Turkey)</span><span>$6.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Fajita Chicken Salad (Lettuce, Chicken, Mozzarella)</span><span>$8.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Taco Salad (Lettuce, Chicken, Mozzarella & Cheddar Cheese)</span><span>$8.99</span></li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Wings</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>Baked or Fried Chicken Wings (1 lb)</span><span>$11.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Baked or Fried Chicken Wings (2 lb)</span><span>$19.99</span></li>
-          </ul>
-        </div>
-        <div class="bg-tertiary-light p-6 rounded-md shadow-md">
-          <h4 class="text-xl sm:text-2xl font-semibold mb-4">Create Your Own Pizza</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>Original Hand Tossed 12"</span><span>$10.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Original Hand Tossed 14"</span><span>$12.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Original Hand Tossed 16"</span><span>$14.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Gluten-Free (Only Available in 10")</span><span>$12.00</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Add Your Favorite Toppings</span><span>$2.00</span></li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Specialty Pizzas</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>A-1 Steak: Steak, Italian Beef, Mozzarella</span><span>$11.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Bacon Cheeseburger: Cheeseburger, Mozzarella</span><span>$10.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>BBQ Chicken: BBQ Sauce, Chicken, Mozzarella</span><span>$10.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Hawaiian Burger: Canadian Bacon, Pineapple</span><span>$11.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Cheesy Potato Delight Pizza: Potato Wedges, Sausage, Bacon, Mozzarella & Cheddar Cheese</span><span>$11.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Alfredo Chicken: Alfredo Sauce, Chicken, Tomato, Spinach & Mozzarella Cheese</span><span>$12.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Cheesy Fry: Cheddar Cheese, Fries, Beef, Onion, Bacon Bits, Mozzarella & Cheddar Cheese</span><span>$10.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Cheesy Egg & Cheese: Scrambled Eggs, Cheese, Italian Sausage, Mozzarella & Cheddar Cheese</span><span>$9.99</span></li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Burgers</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>Spinner Special Smoked Burger: Served on your choice of hoagie bread, pita bread, or 10" flour tortilla wrap.</span><span>$11.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Radar Burger: Mozzarella Cheese, Onion, Ranch Dressing, Bacon.</span><span>$10.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Hawaiian Burger: Canadian Bacon, Pineapple.</span><span>$11.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Big and Wolf Burger: Mozzarella Cheese, Onions, Mushrooms, Pickles, with Mozzarella & Bacon.</span><span>$11.99</span></li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Desserts</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>Cookies (2)</span><span>$1.50</span></li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold mt-8 mb-4">Drinks</h4>
-          <ul class="space-y-2">
-            <li class="flex justify-between text-sm sm:text-base"><span>20 oz Fountain Drinks</span><span>$2.25</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>1 Liter Bottle</span><span>$2.99</span></li>
-            <li class="flex justify-between text-sm sm:text-base"><span>Root Beer, Mountain Dew, Dole Juice</span><span>$2.99</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+     <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">🇺🇸 Welcome to Our All-American Menu 🇺🇸</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">House Specials</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>Chicken Alfredo</li>
+      <li>Homemade Lasagna</li>
+      <li>Fried Fish (Served 7 Days a Week)</li>
+      <li>Fried Frog Legs (Served 7 Days a Week)</li>
+    </ul>
+
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Appetizers</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>Mac 'n Cheese Bacon Nuggets</li>
+      <li>Jalapeño Poppers</li>
+      <li>Mozzarella Sticks</li>
+      <li>Chicken Wings</li>
+      <li>Garlic Breadsticks</li>
+      <li>Garlic Cheese Bread</li>
+    </ul>
+
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Salads</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>Side Salad</li>
+      <li>Chef Salad</li>
+      <li>Fajita Chicken Salad</li>
+      <li>Taco Salad</li>
+    </ul>
+  </div>
+
+  <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">Create Your Own Pizza</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>Original Hand Tossed</li>
+      <li>Gluten-Free</li>
+      <li>Add Your Favorite Toppings</li>
+    </ul>
+
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Specialty Pizzas</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>A-1 Steak Pizza</li>
+      <li>Bacon Cheeseburger Pizza</li>
+      <li>BBQ Chicken Pizza</li>
+      <li>Hawaiian Pizza</li>
+      <li>Cheesy Potato Delight</li>
+      <li>Alfredo Chicken Pizza</li>
+    </ul>
+
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Burgers</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>Spinner Special Smoked Burger</li>
+      <li>Radar Burger</li>
+      <li>Hawaiian Burger</li>
+      <li>Big & Wolf Burger</li>
+    </ul>
+
+    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Desserts & Drinks</h4>
+    <ul class="list-disc ml-4 text-gray-800">
+      <li>Cookies</li>
+      <li>Fountain Drinks</li>
+      <li>Bottled Beverages</li>
+    </ul>
+  </div>
+</div>
+<div class="text-center mt-8 text-blue-600 font-bold">
+  <span class="text-red-600">★</span> Famous for Fried Fish & Frog Legs <span class="text-red-600">★</span>
+</div>
+
   </section>
   <section id="reviews" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
@@ -251,12 +239,13 @@
   </section>
   <section id="contact" class="py-12 bg-white">
     <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Contact Us</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come On Out<br>&<br>Get Some All-American Food!</h3>
       <div class="text-center">
+        <p class="mb-2">Everyone and anyone is welcome here at Spinners!</p>
         <p class="mb-2">Address: 9537 MO-5, Grovespring, MO 65662</p>
         <p class="mb-2">(417) 462-7746</p>
         <div class="w-full h-64 sm:h-96 mt-6">
-          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.7460607848246!2d-92.60486078466518!3d37.40562317983105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cfaf5946e0fb5b%3A0x1a1c4f8ef3df1a5d!2s9537%20MO-5%2C%20Grovespring%2C%20MO%2065662%2C%20USA!5e0!3m2!1sen!2sus!4v1619193968391!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading=""></iframe>
         </div>
       </div>
     </div>
@@ -300,4 +289,5 @@
     });
   </script>
 </body>
+
 </html>
