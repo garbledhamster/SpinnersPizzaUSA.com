@@ -6,6 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spinners Pizza</title>
   <link rel="icon" href="assets/images/logos/1.png">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Spinners Pizza" />
+  <meta property="og:description" content="Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!" />
+  <meta property="og:image" content="https://yourdomain.com/assets/images/background/current.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spinners Pizza" />
+  <meta name="twitter:description" content="Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!" />
+  <meta name="twitter:image" content="https://yourdomain.com/assets/images/background/current.jpg" />
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -30,11 +45,23 @@
   </script>
   <style>
     @keyframes rotate-logo {
-      from { transform: rotateY(0deg); }
-      to { transform: rotateY(360deg); }
+      from {
+        transform: rotateY(0deg);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
     }
-    .animate-rotate { animation: rotate-logo 4s linear infinite; transform-style: preserve-3d; }
-    .logo-container { perspective: 1000px; }
+
+    .animate-rotate {
+      animation: rotate-logo 4s linear infinite;
+      transform-style: preserve-3d;
+    }
+
+    .logo-container {
+      perspective: 1000px;
+    }
   </style>
 </head>
 
@@ -58,7 +85,8 @@
         </ul>
         <button id="mobile-menu-button" class="md:hidden text-secondary hover:text-tertiary">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
@@ -76,19 +104,23 @@
       </ul>
     </div>
   </header>
-<section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('assets/images/background/current.jpg');">
+  <section id="home" class="bg-cover bg-center h-screen relative"
+    style="background-image: url('assets/images/background/current.jpg');">
     <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
     <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Welcome to Spinners Pizza!</h2>
       <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!</p>
-      <a href="#menu" class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our Menu</a>
+      <a href="#menu"
+        class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our Menu</a>
     </div>
   </section>
   <section id="about" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-4">About Spinners Pizza</h3>
-      <p class="text-base sm:text-lg">At Spinners Pizza, our passion is crafting delicious pizzas and other menu items with the finest ingredients. Our commitment to quality and community drives us to serve you every day.</p>
-      <p class="mt-4 text-base sm:text-lg">We proudly offer discounts to our heroes – service members, police officers, firefighters, and first responders – as a thank you for their dedication.</p>
+      <p class="text-base sm:text-lg">At Spinners Pizza, our passion is crafting delicious pizzas and other menu items
+        with the finest ingredients. Our commitment to quality and community drives us to serve you every day.</p>
+      <p class="mt-4 text-base sm:text-lg">We proudly offer discounts to our heroes – service members, police officers,
+        firefighters, and first responders – as a thank you for their dedication.</p>
     </div>
   </section>
   <section class="py-12 bg-gray-100">
@@ -105,19 +137,32 @@
             <li>Saturday: 11am - 8pm</li>
             <li>Sunday: 11am - 6pm</li>
           </ul>
-          <p class="mt-4 font-semibold text-xs">Please note that these are our winter operating hours. Check back for updates on our regular hours.</p>
+          <p class="mt-4 font-semibold text-xs">Please note that these are our winter operating hours. Check back for
+            updates on our regular hours.</p>
         </div>
         <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md">
           <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
-          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!</p>
+          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant—perfect for family
+            meals or a quick bite with friends!</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="assets/images/restaurant/02 walking in from front door looking at the dining room.jpg" alt="Walking into Dining Room" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
-            <img src="assets/images/restaurant/03 straight from the entrance looking at the counter.jpg" alt="Looking at the Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
-            <img src="assets/images/restaurant/04 view from counter looking at the door to the restaurant and the restrooms.jpg" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
-            <img src="assets/images/restaurant/05 view of dining room from the counter.jpg" alt="Dining Room from Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
-            <img src="assets/images/restaurant/06 dining area.jpg" alt="Dining Area 1" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
-            <img src="assets/images/restaurant/07 dining area.jpg" alt="Dining Area 2" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
-            <img src="assets/images/restaurant/08 dining area.jpg" alt="Dining Area 3" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
+            <img src="assets/images/restaurant/02 walking in from front door looking at the dining room.jpg"
+              alt="Walking into Dining Room" class="rounded-md shadow-md w-full"
+              onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
+            <img src="assets/images/restaurant/03 straight from the entrance looking at the counter.jpg"
+              alt="Looking at the Counter" class="rounded-md shadow-md w-full"
+              onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
+            <img src="assets/images/restaurant/04 view from counter looking at the door to the restaurant and the restrooms.jpg"
+              alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full"
+              onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
+            <img src="assets/images/restaurant/05 view of dining room from the counter.jpg"
+              alt="Dining Room from Counter" class="rounded-md shadow-md w-full"
+              onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
+            <img src="assets/images/restaurant/06 dining area.jpg" alt="Dining Area 1"
+              class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
+            <img src="assets/images/restaurant/07 dining area.jpg" alt="Dining Area 2"
+              class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
+            <img src="assets/images/restaurant/08 dining area.jpg" alt="Dining Area 3"
+              class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
           </div>
         </div>
       </div>
@@ -125,74 +170,74 @@
   </section>
   <section id="menu" class="py-12 bg-tertiary-light">
     <div class="container mx-auto px-6">
-     <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">🇺🇸 Welcome to Our All-American Menu 🇺🇸</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-  <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">House Specials</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>Chicken Alfredo</li>
-      <li>Homemade Lasagna</li>
-      <li>Fried Fish (Served 7 Days a Week)</li>
-      <li>Fried Frog Legs (Served 7 Days a Week)</li>
-    </ul>
+      <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">🇺🇸 Welcome to Our All-American Menu 🇺🇸</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">House Specials</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>Chicken Alfredo</li>
+            <li>Homemade Lasagna</li>
+            <li>Fried Fish (Served 7 Days a Week)</li>
+            <li>Fried Frog Legs (Served 7 Days a Week)</li>
+          </ul>
 
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Appetizers</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>Mac 'n Cheese Bacon Nuggets</li>
-      <li>Jalapeño Poppers</li>
-      <li>Mozzarella Sticks</li>
-      <li>Chicken Wings</li>
-      <li>Garlic Breadsticks</li>
-      <li>Garlic Cheese Bread</li>
-    </ul>
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Appetizers</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>Mac 'n Cheese Bacon Nuggets</li>
+            <li>Jalapeño Poppers</li>
+            <li>Mozzarella Sticks</li>
+            <li>Chicken Wings</li>
+            <li>Garlic Breadsticks</li>
+            <li>Garlic Cheese Bread</li>
+          </ul>
 
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Salads</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>Side Salad</li>
-      <li>Chef Salad</li>
-      <li>Fajita Chicken Salad</li>
-      <li>Taco Salad</li>
-    </ul>
-  </div>
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Salads</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>Side Salad</li>
+            <li>Chef Salad</li>
+            <li>Fajita Chicken Salad</li>
+            <li>Taco Salad</li>
+          </ul>
+        </div>
 
-  <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">Create Your Own Pizza</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>Original Hand Tossed</li>
-      <li>Gluten-Free</li>
-      <li>Add Your Favorite Toppings</li>
-    </ul>
+        <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">Create Your Own Pizza</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>Original Hand Tossed</li>
+            <li>Gluten-Free</li>
+            <li>Add Your Favorite Toppings</li>
+          </ul>
 
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Specialty Pizzas</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>A-1 Steak Pizza</li>
-      <li>Bacon Cheeseburger Pizza</li>
-      <li>BBQ Chicken Pizza</li>
-      <li>Hawaiian Pizza</li>
-      <li>Cheesy Potato Delight</li>
-      <li>Alfredo Chicken Pizza</li>
-    </ul>
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Specialty Pizzas</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>A-1 Steak Pizza</li>
+            <li>Bacon Cheeseburger Pizza</li>
+            <li>BBQ Chicken Pizza</li>
+            <li>Hawaiian Pizza</li>
+            <li>Cheesy Potato Delight</li>
+            <li>Alfredo Chicken Pizza</li>
+          </ul>
 
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Burgers</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>Spinner Special Smoked Burger</li>
-      <li>Radar Burger</li>
-      <li>Hawaiian Burger</li>
-      <li>Big & Wolf Burger</li>
-    </ul>
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Burgers</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>Spinner Special Smoked Burger</li>
+            <li>Radar Burger</li>
+            <li>Hawaiian Burger</li>
+            <li>Big & Wolf Burger</li>
+          </ul>
 
-    <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Desserts & Drinks</h4>
-    <ul class="list-disc ml-4 text-gray-800">
-      <li>Cookies</li>
-      <li>Fountain Drinks</li>
-      <li>Bottled Beverages</li>
-    </ul>
-  </div>
-</div>
-<div class="text-center mt-8 text-blue-600 font-bold">
-  <span class="text-red-600">★</span> Famous for Fried Fish & Frog Legs <span class="text-red-600">★</span>
-</div>
-
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Desserts & Drinks</h4>
+          <ul class="list-disc ml-4 text-gray-800">
+            <li>Cookies</li>
+            <li>Fountain Drinks</li>
+            <li>Bottled Beverages</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-8 text-blue-600 font-bold">
+        <span class="text-red-600">★</span> Famous for Fried Fish & Frog Legs <span class="text-red-600">★</span>
+      </div>
+    </div>
   </section>
   <section id="reviews" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
@@ -227,6 +272,7 @@
               </div>
             </div>
           </div>
+          <!-- Add more reviews as needed -->
         </div>
       </div>
     </div>
@@ -245,7 +291,9 @@
         <p class="mb-2">Address: 9537 MO-5, Grovespring, MO 65662</p>
         <p class="mb-2">(417) 462-7746</p>
         <div class="w-full h-64 sm:h-96 mt-6">
-          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading=""></iframe>
+          <iframe class="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus"
+            style="border:0;" allowfullscreen="" loading=""></iframe>
         </div>
       </div>
     </div>
