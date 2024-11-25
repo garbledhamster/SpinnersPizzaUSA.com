@@ -6,51 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spinners Pizza</title>
   <link rel="icon" href="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/logos/1.png?raw=true">
-
-  <meta property="og:title" content="Spinner's Pizza - Your Favorite Pizza Spot!" />
-  <meta property="og:description" content="Delicious pizzas, mouth-watering wings, and more! Visit Spinner's Pizza today!" />
-  <meta property="og:image" content="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true" />
-  <meta property="og:url" content="https://spinners.pizza" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Spinner's Pizza - Your Favorite Pizza Spot!" />
-  <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Visit Spinner's Pizza today!" />
-  <meta name="twitter:image" content="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true" />
-  <meta name="apple-mobile-web-app-title" content="Spinner's Pizza" />
-  <link rel="apple-touch-icon" href="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true" />
-  <meta property="og:site_name" content="Spinner's Pizza" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="og:image:width" content="1200" />
-  <meta name="og:image:height" content="630" />
-
-  <link rel="icon" type="image/png" href="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true" sizes="192x192" />
-
-  <meta name="description" content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!" />
-  <meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly" />
-  <meta name="author" content="Spinners Pizza" />
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "Spinner's Pizza",
-      "description": "Delicious pizzas, mouth-watering wings, and more! Visit Spinner's Pizza today!",
-      "image": "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true",
-      "telephone": "(417) 462-7746",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "9537 MO-5",
-        "addressLocality": "Grovespring",
-        "addressRegion": "MO",
-        "postalCode": "65662",
-        "addressCountry": "US"
-      },
-      "url": "https://spinners.pizza",
-      "openingHours": "Mo-Su 11:00-20:00",
-      "priceRange": "$$"
-    }
-  </script>
-
+  <meta property="og:title" content="Spinner's Pizza - Your Favorite Pizza Spot!">
+  <meta property="og:description" content="Delicious pizzas, mouth-watering wings, and more! Visit Spinner's Pizza today!">
+  <meta property="og:image" content="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true">
+  <meta property="og:url" content="https://spinners.pizza">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spinner's Pizza - Your Favorite Pizza Spot!">
+  <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Visit Spinner's Pizza today!">
+  <meta name="twitter:image" content="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true">
+  <meta name="apple-mobile-web-app-title" content="Spinner's Pizza">
+  <link rel="apple-touch-icon" href="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true">
+  <meta property="og:site_name" content="Spinner's Pizza">
+  <meta property="og:locale" content="en_US">
+  <meta name="og:image:width" content="1200">
+  <meta name="og:image:height" content="630">
+  <link rel="icon" type="image/png" href="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/background/1.jpg?raw=true" sizes="192x192">
+  <meta name="description" content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
+  <meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly">
+  <meta name="author" content="Spinners Pizza">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -69,7 +43,7 @@
           md: '1080px',
           lg: '1024px',
           xl: '1280px',
-          '2xl': '1536px',
+          '2xl': '1536px'
         }
       }
     }
@@ -128,13 +102,45 @@
     .hours-card li:last-child {
       border-bottom: none;
     }
+
+    .modal-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+      font-size: 2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+
+    .modal-image {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    #image-modal {
+      transition: opacity 0.25s ease;
+    }
+
+    #image-modal .modal-button {
+      /* Ensuring the exit button is styled correctly */
+    }
+
+    #image-modal .navigation-button {
+      /* Styles for navigation buttons if needed */
+    }
   </style>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-primary text-secondary fixed w-full z-30 shadow-md header overflow-visible">
     <div class="container mx-auto flex justify-between items-center p-4 relative ">
-      <div class="absolute left-4 top-5 logo-container h-40 w-40 flex items-center justify-center  animate-rotate">
+      <div class="absolute left-4 top-5 logo-container h-40 w-40 flex items-center justify-center animate-rotate">
         <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/logos/1.png?raw=true" id="logo" alt="Spinners Pizza Logo" class="h-full w-full rounded-md object-cover" onerror="this.onerror=null; this.src='https://picsum.photos/160'">
       </div>
       <h1 class="text-xl sm:text-2xl font-bold ml-48 mr-4">Spinners Pizza</h1>
@@ -151,7 +157,7 @@
         </ul>
         <button id="mobile-menu-button" class="md:hidden text-secondary hover:text-tertiary">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </nav>
@@ -180,6 +186,7 @@
   <section id="about" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-4">About Spinners Pizza</h3>
+      <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/logos/98.png?raw=true" class="mx-auto w-1/4 aspect-auto border-4" alt="Spinner">
       <p class="text-base sm:text-lg">At Spinners Pizza, our passion is crafting delicious pizzas and other menu items with the finest ingredients. Our commitment to quality and community drives us to serve you every day.</p>
       <p class="mt-4 text-base sm:text-lg">We proudly offer discounts to our heroes – service members, police officers, firefighters, and first responders – as a thank you for their dedication.</p>
     </div>
@@ -198,19 +205,26 @@
             <li>Saturday: 11am - 8pm</li>
             <li>Sunday: 11am - 6pm</li>
           </ul>
-          <p class="mt-4 font-semibold text-xs">Please note that these are our winter operating hours. Check back for updates on our regular hours.</p>
+          <p class="mt-4 font-semibold text-xs">
+            Please note that these are our winter operating hours. Check back for updates on our regular hours.
+          </p>
+          <p class="mt-4 font-semibold text-xs">
+            We are closed Thanksgiving Day, December 23rd thru December 26th, Easter Sunday, and 4th of July. Tim may have other days.
+          </p>
         </div>
         <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md">
           <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
-          <p class="mb-6 text-base sm:text-lg">Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!</p>
+          <p class="mb-6 text-base sm:text-lg">
+            Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!
+          </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/02 walking in from front door looking at the dining room.jpg?raw=true" alt="Walking into Dining Room" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/03 straight from the entrance looking at the counter.jpg?raw=true" alt="Looking at the Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/04 view from counter looking at the door to the restaurant and the restrooms.jpg?raw=true" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/05 view of dining room from the counter.jpg?raw=true" alt="Dining Room from Counter" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/06 dining area.jpg?raw=true" alt="Dining Area 1" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/07 dining area.jpg?raw=true" alt="Dining Area 2" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/08 dining area.jpg?raw=true" alt="Dining Area 3" class="rounded-md shadow-md w-full" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true" alt="Walking into Dining Room" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(0)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true" alt="Looking at the Counter" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(1)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(2)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/05%20view%20of%20dining%20room%20from%20the%20counter.jpg?raw=true" alt="Dining Room from Counter" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(3)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/06%20dining%20area.jpg?raw=true" alt="Dining Area 1" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(4)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/07%20dining%20area.jpg?raw=true" alt="Dining Area 2" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(5)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/08%20dining%20area.jpg?raw=true" alt="Dining Area 3" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(6)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
           </div>
         </div>
       </div>
@@ -218,7 +232,7 @@
   </section>
   <section id="menu" class="py-12 bg-tertiary-light">
     <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">🇺🇸 Welcome to Our All-American Menu 🇺🇸</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">~ Welcome to Our All-American Menu ~</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">House Specials</h4>
@@ -228,7 +242,6 @@
             <li>Fried Fish (Served 7 Days a Week)</li>
             <li>Fried Frog Legs (Served 7 Days a Week)</li>
           </ul>
-
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Appetizers</h4>
           <ul class="list-disc ml-4 text-gray-800">
             <li>Mac 'n Cheese Bacon Nuggets</li>
@@ -238,7 +251,6 @@
             <li>Garlic Breadsticks</li>
             <li>Garlic Cheese Bread</li>
           </ul>
-
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Salads</h4>
           <ul class="list-disc ml-4 text-gray-800">
             <li>Side Salad</li>
@@ -247,7 +259,6 @@
             <li>Taco Salad</li>
           </ul>
         </div>
-
         <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">Create Your Own Pizza</h4>
           <ul class="list-disc ml-4 text-gray-800">
@@ -255,7 +266,6 @@
             <li>Gluten-Free</li>
             <li>Add Your Favorite Toppings</li>
           </ul>
-
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Specialty Pizzas</h4>
           <ul class="list-disc ml-4 text-gray-800">
             <li>A-1 Steak Pizza</li>
@@ -265,15 +275,14 @@
             <li>Cheesy Potato Delight</li>
             <li>Alfredo Chicken Pizza</li>
           </ul>
-
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Burgers</h4>
           <ul class="list-disc ml-4 text-gray-800">
             <li>Spinner Special Smoked Burger</li>
             <li>Radar Burger</li>
             <li>Hawaiian Burger</li>
             <li>Big & Wolf Burger</li>
+            <li>Hoagie Burgers - Special rectangular burgers that perfectly fit on a hoagie bun</li>
           </ul>
-
           <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Desserts & Drinks</h4>
           <ul class="list-disc ml-4 text-gray-800">
             <li>Cookies</li>
@@ -285,6 +294,14 @@
       <div class="text-center mt-8 text-blue-600 font-bold">
         <span class="text-red-600">★</span> Famous for Fried Fish & Frog Legs <span class="text-red-600">★</span>
       </div>
+      <div class="mt-8">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu1.jpg?raw=true" alt="Menu Image 1" class="cursor-pointer rounded-md" onclick="openModal(7)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=9'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu2.jpg?raw=true" alt="Menu Image 2" class="cursor-pointer rounded-md" onclick="openModal(8)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=10'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu3.jpg?raw=true" alt="Menu Image 3" class="cursor-pointer rounded-md" onclick="openModal(9)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=11'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu4.jpg?raw=true" alt="Menu Image 4" class="cursor-pointer rounded-md" onclick="openModal(10)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=12'">
+        </div>
+      </div>
     </div>
   </section>
   <section id="reviews" class="py-12 bg-gray-50">
@@ -293,31 +310,24 @@
       <p class="text-base sm:text-lg mb-6">Read what our customers have to say!</p>
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
         <div id="review-carousel" class="flex transition-transform duration-1000 ease-in-out">
-          <!-- Review #1 -->
           <a href="https://maps.app.goo.gl/8FukpDRr5WbMhpGTA" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
             <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
               <p class="italic text-lg">"The food was great! Had a side salad, garlic cheese sticks, and a small deluxe pizza! Everything was super fresh and super tasty! The two young girls that were working were nice and attentive! Would definitely recommend! Stop by if you are close!"</p>
               <p class="mt-4 font-semibold">- Ashley Alderson</p>
             </div>
           </a>
-
-          <!-- Review #2 -->
           <a href="https://maps.app.goo.gl/jsMFxSnMSP1J1sbFA" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
             <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
               <p class="italic text-lg">"Delicious pizza! The BBQ Chicken bacon ranch pizza was amazing. Great service as well. Will be going back soon."</p>
               <p class="mt-4 font-semibold">- Charlie Maddux</p>
             </div>
           </a>
-
-          <!-- Review #3 -->
           <a href="https://maps.app.goo.gl/QCYmuxvz9aaXoYar9" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
             <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
               <p class="italic text-lg">"The pizza was amazing! If you are looking for a great thin crust pizza! We will be coming back!"</p>
               <p class="mt-4 font-semibold">- Eva Hlubik</p>
             </div>
           </a>
-
-          <!-- Review #4 -->
           <a href="https://maps.app.goo.gl/PFfH7PBL77W7xKK69" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
             <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
               <p class="italic text-lg">"This place is awesome! The fried catfish was perfect. The menu selection is so large that everyone will find a favorite."</p>
@@ -336,11 +346,12 @@
   </section>
   <section id="contact" class="py-12 bg-white">
     <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come On Out<br>&<br>Get Some All-American Food!</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come on out!</h3>
       <div class="text-center">
         <p class="mb-2">Everyone and anyone is welcome here at Spinners!</p>
-        <p class="mb-2">Address: 9537 MO-5, Grovespring, MO 65662</p>
-        <p class="mb-2">(417) 462-7746</p>
+        <p class="mb-2">Join us for a delightful dining experience or order for convenient carry-out.</p>
+        <p class="mb-2"><strong>Address:</strong> 9537 MO-5, Grovespring, MO 65662</p>
+        <p class="mb-2">For carry-out orders, questions, comments, or concerns, please call <a href="tel:4174627746"><b>(417) 462-7746</b></a>.</p>
         <div class="w-full h-64 sm:h-96 mt-6">
           <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading=""></iframe>
         </div>
@@ -350,19 +361,98 @@
   <footer class="bg-gray-800 text-secondary text-center p-4">
     <p>© 2024 Spinners Pizza. All rights reserved.</p>
   </footer>
+
+  <!-- Unified Modal -->
+  <div id="image-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden z-50" role="dialog" aria-modal="true" aria-labelledby="modal-image-description">
+    <div class="relative w-full h-full flex items-center justify-center">
+      <button class="modal-button text-white text-2xl" onclick="closeModal()">&times;</button>
+      <img id="modal-image" src="" alt="Modal Image" class="modal-image">
+      <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
+        <button class="text-white text-3xl p-2 bg-red-600" onclick="prevImage()">&lsaquo;</button>
+      </div>
+      <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
+        <button class="text-white text-3xl p-2 bg-blue-600" onclick="nextImage()">&rsaquo;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
   <script>
+    // Combined Image URLs for Gallery and Menu
+    const imageUrls = [
+      // Gallery Images (Indices 0-6)
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/05%20view%20of%20dining%20room%20from%20the%20counter.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/06%20dining%20area.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/07%20dining%20area.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/08%20dining%20area.jpg?raw=true",
+      // Menu Images (Indices 7-12)
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu1.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu2.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu3.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu4.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu5.jpg?raw=true",
+      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu6.jpg?raw=true"
+    ];
+    let currentImageIndex = 0;
+    const modal = document.getElementById('image-modal');
+    const modalImage = document.getElementById('modal-image');
+    // Open Modal Function
+    function openModal(index) {
+      currentImageIndex = index;
+      modalImage.src = imageUrls[currentImageIndex];
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    // Close Modal Function
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+    // Previous Image Function
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
+      modalImage.src = imageUrls[currentImageIndex];
+    }
+    // Next Image Function
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+      modalImage.src = imageUrls[currentImageIndex];
+    }
+    // Close modal when clicking outside the image or on the background
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.classList.contains('modal-button')) {
+        closeModal();
+      }
+    });
+    // Keyboard Navigation for Modal
+    document.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          closeModal();
+        } else if (e.key === 'ArrowLeft') {
+          prevImage();
+        } else if (e.key === 'ArrowRight') {
+          nextImage();
+        }
+      }
+    });
+    // Random Logo Rotation
     const logo = document.getElementById('logo');
     let lastLogoNumber = 0;
     const setRandomLogo = () => {
       let logoNumber;
       do {
-        logoNumber = Math.floor(Math.random() * 13) + 1;
+        logoNumber = Math.floor(Math.random() * 6) + 1;
       } while (logoNumber === lastLogoNumber);
       lastLogoNumber = logoNumber;
       logo.src = `https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/logos/${logoNumber}.png?raw=true`;
     };
-    //setRandomLogo();
-    //setInterval(setRandomLogo, 4000);
+    setRandomLogo();
+    setInterval(setRandomLogo, 4000);
+    // Mobile Menu Toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     menuButton.addEventListener('click', (e) => {
@@ -374,6 +464,7 @@
         mobileMenu.classList.add('hidden');
       }
     });
+    // Reviews Carousel
     document.addEventListener('DOMContentLoaded', () => {
       const carouselInner = document.getElementById('review-carousel');
       const totalSlides = carouselInner.children.length;
