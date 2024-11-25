@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <title>Spinners Pizza</title>
   <link rel="icon" href="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/logos/1.png?raw=true">
   <meta property="og:title" content="Spinner's Pizza - Your Favorite Pizza Spot!">
@@ -123,16 +123,45 @@
       object-fit: contain;
     }
 
-    #image-modal {
-      transition: opacity 0.25s ease;
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      overflow: hidden;
     }
 
-    #image-modal .modal-button {
-      /* Ensuring the exit button is styled correctly */
+    .modal.open {
+      display: flex;
     }
 
-    #image-modal .navigation-button {
-      /* Styles for navigation buttons if needed */
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    /* Image Container for Zoom */
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      max-width: 1000px;
+      max-height: 1000px;
     }
   </style>
 </head>
@@ -218,13 +247,13 @@
             Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true" alt="Walking into Dining Room" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(0)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true" alt="Looking at the Counter" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(1)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true" alt="Door to Restaurant and Restrooms" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(2)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/05%20view%20of%20dining%20room%20from%20the%20counter.jpg?raw=true" alt="Dining Room from Counter" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(3)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/06%20dining%20area.jpg?raw=true" alt="Dining Area 1" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(4)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/07%20dining%20area.jpg?raw=true" alt="Dining Area 2" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(5)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
-            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/08%20dining%20area.jpg?raw=true" alt="Dining Area 3" class="rounded-md shadow-md w-full cursor-pointer" onclick="openModal(6)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true" alt="Walking into Dining Room" class="cursor-pointer rounded-md" onclick="openGalleryModal(0)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true" alt="Looking at the Counter" class="cursor-pointer rounded-md" onclick="openGalleryModal(1)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true" alt="Door to Restaurant and Restrooms" class="cursor-pointer rounded-md" onclick="openGalleryModal(2)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/05%20view%20of%20dining%20room%20from%20the%20counter.jpg?raw=true" alt="Dining Room from Counter" class="cursor-pointer rounded-md" onclick="openGalleryModal(3)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/06%20dining%20area.jpg?raw=true" alt="Dining Area 1" class="cursor-pointer rounded-md" onclick="openGalleryModal(4)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/07%20dining%20area.jpg?raw=true" alt="Dining Area 2" class="cursor-pointer rounded-md" onclick="openGalleryModal(5)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
+            <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/08%20dining%20area.jpg?raw=true" alt="Dining Area 3" class="cursor-pointer rounded-md" onclick="openGalleryModal(6)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
           </div>
         </div>
       </div>
@@ -296,10 +325,10 @@
       </div>
       <div class="mt-8">
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu1.jpg?raw=true" alt="Menu Image 1" class="cursor-pointer rounded-md" onclick="openModal(7)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=9'">
-          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu2.jpg?raw=true" alt="Menu Image 2" class="cursor-pointer rounded-md" onclick="openModal(8)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=10'">
-          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu3.jpg?raw=true" alt="Menu Image 3" class="cursor-pointer rounded-md" onclick="openModal(9)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=11'">
-          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu4.jpg?raw=true" alt="Menu Image 4" class="cursor-pointer rounded-md" onclick="openModal(10)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=12'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu1.jpg?raw=true" alt="Menu Image 1" class="cursor-pointer rounded-md" onclick="openMenuModal(0)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=9'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu2.jpg?raw=true" alt="Menu Image 2" class="cursor-pointer rounded-md" onclick="openMenuModal(1)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=10'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu3.jpg?raw=true" alt="Menu Image 3" class="cursor-pointer rounded-md" onclick="openMenuModal(2)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=11'">
+          <img src="https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu4.jpg?raw=true" alt="Menu Image 4" class="cursor-pointer rounded-md" onclick="openMenuModal(3)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=12'">
         </div>
       </div>
     </div>
@@ -362,25 +391,29 @@
     <p>© 2024 Spinners Pizza. All rights reserved.</p>
   </footer>
 
-  <!-- Unified Modal -->
-  <div id="image-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 hidden z-50" role="dialog" aria-modal="true" aria-labelledby="modal-image-description">
-    <div class="relative w-full h-full flex items-center justify-center">
-      <button class="modal-button text-white text-2xl" onclick="closeModal()">&times;</button>
-      <img id="modal-image" src="" alt="Modal Image" class="modal-image">
-      <div class="absolute top-1/2 left-0 transform -translate-y-1/2">
-        <button class="text-white text-3xl p-2 bg-red-600" onclick="prevImage()">&lsaquo;</button>
-      </div>
-      <div class="absolute top-1/2 right-0 transform -translate-y-1/2">
-        <button class="text-white text-3xl p-2 bg-blue-600" onclick="nextImage()">&rsaquo;</button>
-      </div>
+  <!-- Gallery Modal -->
+  <div id="gallery-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-gallery-description">
+    <div class="image-container">
+      <button class="modal-button" onclick="closeGalleryModal()">&times;</button>
+      <img id="gallery-modal-image" src="" alt="Gallery Modal Image">
+      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-red-600 rounded" onclick="prevGalleryImage()">&lsaquo;</button>
+      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-blue-600 rounded" onclick="nextGalleryImage()">&rsaquo;</button>
     </div>
   </div>
 
-  <!-- JavaScript -->
+  <!-- Menu Modal -->
+  <div id="menu-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-menu-description">
+    <div class="image-container">
+      <button class="modal-button" onclick="closeMenuModal()">&times;</button>
+      <img id="menu-modal-image" src="" alt="Menu Modal Image">
+      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-red-600 rounded" onclick="prevMenuImage()">&lsaquo;</button>
+      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-blue-600 rounded" onclick="nextMenuImage()">&rsaquo;</button>
+    </div>
+  </div>
+
   <script>
-    // Combined Image URLs for Gallery and Menu
-    const imageUrls = [
-      // Gallery Images (Indices 0-6)
+    // Gallery Images
+    const galleryImages = [
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true",
@@ -388,57 +421,100 @@
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/06%20dining%20area.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/07%20dining%20area.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/restaurant/08%20dining%20area.jpg?raw=true",
-      // Menu Images (Indices 7-12)
+    ];
+    let currentGalleryIndex = 0;
+    const galleryModal = document.getElementById('gallery-modal');
+    const galleryModalImage = document.getElementById('gallery-modal-image');
+
+    function openGalleryModal(index) {
+      currentGalleryIndex = index;
+      galleryModalImage.src = galleryImages[currentGalleryIndex];
+      galleryModal.classList.add('open');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeGalleryModal() {
+      galleryModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    }
+
+    function prevGalleryImage() {
+      currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+      galleryModalImage.src = galleryImages[currentGalleryIndex];
+    }
+
+    function nextGalleryImage() {
+      currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+      galleryModalImage.src = galleryImages[currentGalleryIndex];
+    }
+
+    galleryModal.addEventListener('click', (e) => {
+      if (e.target === galleryModal || e.target.classList.contains('modal-button')) {
+        closeGalleryModal();
+      }
+    });
+
+    // Menu Images
+    const menuImages = [
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu1.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu2.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu3.jpg?raw=true",
       "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu4.jpg?raw=true",
-      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu5.jpg?raw=true",
-      "https://github.com/garbledhamster/spinners.pizza/blob/main/assets/images/menu/menu6.jpg?raw=true"
     ];
-    let currentImageIndex = 0;
-    const modal = document.getElementById('image-modal');
-    const modalImage = document.getElementById('modal-image');
-    // Open Modal Function
-    function openModal(index) {
-      currentImageIndex = index;
-      modalImage.src = imageUrls[currentImageIndex];
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    let currentMenuIndex = 0;
+    const menuModal = document.getElementById('menu-modal');
+    const menuModalImage = document.getElementById('menu-modal-image');
+
+    function openMenuModal(index) {
+      currentMenuIndex = index;
+      menuModalImage.src = menuImages[currentMenuIndex];
+      menuModal.classList.add('open');
+      document.body.classList.add('modal-open');
     }
-    // Close Modal Function
-    function closeModal() {
-      modal.classList.add('hidden');
-      document.body.style.overflow = 'auto'; // Restore scrolling
+
+    function closeMenuModal() {
+      menuModal.classList.remove('open');
+      document.body.classList.remove('modal-open');
     }
-    // Previous Image Function
-    function prevImage() {
-      currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
-      modalImage.src = imageUrls[currentImageIndex];
+
+    function prevMenuImage() {
+      currentMenuIndex = (currentMenuIndex - 1 + menuImages.length) % menuImages.length;
+      menuModalImage.src = menuImages[currentMenuIndex];
     }
-    // Next Image Function
-    function nextImage() {
-      currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-      modalImage.src = imageUrls[currentImageIndex];
+
+    function nextMenuImage() {
+      currentMenuIndex = (currentMenuIndex + 1) % menuImages.length;
+      menuModalImage.src = menuImages[currentMenuIndex];
     }
-    // Close modal when clicking outside the image or on the background
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal || e.target.classList.contains('modal-button')) {
-        closeModal();
+
+    menuModal.addEventListener('click', (e) => {
+      if (e.target === menuModal || e.target.classList.contains('modal-button')) {
+        closeMenuModal();
       }
     });
-    // Keyboard Navigation for Modal
+
+    // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
-      if (!modal.classList.contains('hidden')) {
+      if (galleryModal.classList.contains('open')) {
         if (e.key === 'Escape') {
-          closeModal();
+          closeGalleryModal();
         } else if (e.key === 'ArrowLeft') {
-          prevImage();
+          prevGalleryImage();
         } else if (e.key === 'ArrowRight') {
-          nextImage();
+          nextGalleryImage();
+        }
+      }
+      if (menuModal.classList.contains('open')) {
+        if (e.key === 'Escape') {
+          closeMenuModal();
+        } else if (e.key === 'ArrowLeft') {
+          prevMenuImage();
+        } else if (e.key === 'ArrowRight') {
+          nextMenuImage();
         }
       }
     });
+
     // Random Logo Rotation
     const logo = document.getElementById('logo');
     let lastLogoNumber = 0;
@@ -452,6 +528,7 @@
     };
     setRandomLogo();
     setInterval(setRandomLogo, 4000);
+
     // Mobile Menu Toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -459,11 +536,13 @@
       e.stopPropagation();
       mobileMenu.classList.toggle('hidden');
     });
+
     document.addEventListener('click', (event) => {
       if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
         mobileMenu.classList.add('hidden');
       }
     });
+
     // Reviews Carousel
     document.addEventListener('DOMContentLoaded', () => {
       const carouselInner = document.getElementById('review-carousel');
