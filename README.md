@@ -35,12 +35,6 @@ If you appreciate the work that went into this project, feel free to support me 
 
 [Support me on Buy Me a Coffee](https://buymeacoffee.com/garbledhamster)
 
-### Support Tiers
-
-- ☕ **Supporter** – $5/month: A simple “thank you” for my work.
-- 🌐 **Contributor** – $10/month: Keeps websites running by covering hosting fees.
-- 🤝 **Champion** – $20/month: Funds hosting for those in need, making a real difference.
-
 ## License
 
 This project is open source and free to use. Feel free to fork or contribute to the project if you would like to make improvements or add new features!
