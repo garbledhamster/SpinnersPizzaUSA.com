@@ -4,27 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>Spinners Pizza - Grovespring MO</title>
+  <title>Spinners Pizza - Grovespring Missouri</title>
   <link rel="icon" href="https://spinners.pizza/assets/images/background/1.jpg">
+
+  <!-- Google Fonts: Lora -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Spinners Pizza - Grovespring Missouri">
-  <meta property="og:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Deliver or Carry-out.">
+  <meta property="og:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta property="og:image" content="https://spinners.pizza/assets/images/background/1.jpg">
   <meta property="og:url" content="https://spinners.pizza">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Spinners Pizza - Grovespring Missouri">
-  <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Deliver or Carry-out.">
+  <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta name="twitter:image" content="https://spinners.pizza/assets/images/background/1.jpg">
   <meta name="apple-mobile-web-app-title" content="Spinner's Pizza">
   <link rel="apple-touch-icon" href="https://spinners.pizza/assets/images/background/1.jpg">
   <meta property="og:site_name" content="Spinners Pizza - Grovespring Missouri">
   <meta property="og:locale" content="en_US">
-  <meta name="og:image:width" content="1200">
-  <meta name="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="icon" type="image/png" href="https://spinners.pizza/assets/images/background/1.jpg" sizes="192x192">
   <meta name="description" content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
   <meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
   <meta name="author" content="Spinners Pizza">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -48,7 +57,14 @@
       }
     }
   </script>
+
+  <!-- Custom Styles -->
   <style>
+    /* Apply Lora Font */
+    body {
+      font-family: 'Lora', serif;
+    }
+
     @keyframes rotate-logo {
       from {
         transform: rotateY(0deg);
@@ -162,8 +178,25 @@
       max-width: 1000px;
       max-height: 1000px;
     }
+
+    /* Reviews Carousel Styles */
+    #review-carousel {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+
+    #review-carousel a {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Optional: Add some padding to the carousel */
+    #review-carousel .review-item {
+      padding: 1rem;
+    }
   </style>
 </head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSF3XF4NE6"></script>
 <script>
@@ -178,9 +211,12 @@
 
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-primary text-secondary fixed w-full z-30 shadow-md header overflow-visible">
-    <div class="container mx-auto flex justify-between items-center p-4 relative ">
-      <!-- Removed Rotating Logo from Header -->
-      <h1 class="text-xl sm:text-2xl font-bold">Spinners Pizza</h1>
+    <div class="container mx-auto flex justify-between items-center p-4 relative">
+      <!-- Added Logo Image Next to "Spinners Pizza" -->
+      <h1 class="text-xl sm:text-2xl font-bold flex items-center">
+        <img src="https://spinners.pizza/assets/images/logos/1.png" alt="Spinners Pizza Logo" class="h-8 mr-2" onerror="this.onerror=null; this.src='https://picsum.photos/40'">
+        Spinners Pizza
+      </h1>
       <nav>
         <ul class="hidden md:flex space-x-4">
           <li><a href="#home" class="hover:underline hover:text-tertiary">Home</a></li>
@@ -235,7 +271,7 @@
   <section id="about" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
       <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4"></h3>
-      <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4" alt="Spinner">
+      <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4 transition-transform duration-300 transform hover:scale-105 rounded-md cursor-pointer" alt="Spinner">
       <div id="about-paragraphs">
         <!-- About paragraphs will be inserted here -->
       </div>
@@ -260,7 +296,7 @@
             Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!
           </p>
           <div id="gallery-images" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Gallery images will be inserted here -->
+            <!-- Gallery images will be inserted here with hover zoom effect -->
           </div>
         </div>
       </div>
@@ -278,7 +314,7 @@
       </div>
       <div class="mt-8">
         <div id="menu-images" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          <!-- Menu images will be inserted here -->
+          <!-- Menu images will be inserted here with hover zoom effect -->
         </div>
       </div>
     </div>
@@ -349,6 +385,7 @@
     let galleryData = [];
     let menuData = {};
     let reviewsData = [];
+
     // Fetch JSON Data
     async function fetchData() {
       try {
@@ -362,15 +399,18 @@
         menuData = await menuResponse.json();
         const reviewsResponse = await fetch('https://spinners.pizza/data/reviews.json');
         reviewsData = await reviewsResponse.json();
+
         populateAboutSection();
         populateHoursSection();
         populateGallerySection();
         populateMenuSection();
         populateReviewsSection();
+        initializeReviewCarousel(); // Initialize the carousel after populating reviews
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     }
+
     // Populate About Section
     function populateAboutSection() {
       document.getElementById('about-title').textContent = aboutData.title;
@@ -385,6 +425,7 @@
         aboutParagraphs.appendChild(p);
       });
     }
+
     // Populate Hours Section
     function populateHoursSection() {
       document.getElementById('hours-title').textContent = hoursData.title;
@@ -401,6 +442,7 @@
         hoursNotes.appendChild(p);
       });
     }
+
     // Populate Gallery Section
     let currentGalleryIndex = 0;
 
@@ -410,15 +452,17 @@
         const img = document.createElement('img');
         img.src = image.src;
         img.alt = image.alt;
-        img.className = 'cursor-pointer rounded-md';
+        // Tailwind classes for hover zoom
+        img.className = 'cursor-pointer rounded-md transition-transform duration-300 transform hover:scale-105';
         img.onclick = () => openGalleryModal(index);
-        img.onerror = function() {
+        img.onerror = function () {
           this.onerror = null;
           this.src = `https://picsum.photos/400/300?random=${index + 2}`;
         };
         galleryImagesDiv.appendChild(img);
       });
     }
+
     // Populate Menu Section
     let currentMenuIndex = 0;
 
@@ -448,22 +492,24 @@
         const img = document.createElement('img');
         img.src = src;
         img.alt = `Menu Image ${index + 1}`;
-        img.className = 'cursor-pointer rounded-md';
+        // Tailwind classes for hover zoom
+        img.className = 'cursor-pointer rounded-md transition-transform duration-300 transform hover:scale-105';
         img.onclick = () => openMenuModal(index);
-        img.onerror = function() {
+        img.onerror = function () {
           this.onerror = null;
           this.src = `https://picsum.photos/400/300?random=${index + 9}`;
         };
         menuImagesDiv.appendChild(img);
       });
     }
+
     // Populate Reviews Section
     function populateReviewsSection() {
       const reviewCarousel = document.getElementById('review-carousel');
       reviewsData.forEach(review => {
         const a = document.createElement('a');
-        a.href = review.href;
-        a.className = 'w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6';
+        a.href = review.href || '#';
+        a.className = 'w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6 review-item';
         const div = document.createElement('div');
         div.className = 'bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center';
         const pReview = document.createElement('p');
@@ -478,6 +524,21 @@
         reviewCarousel.appendChild(a);
       });
     }
+
+    // Initialize Reviews Carousel after populating reviews
+    function initializeReviewCarousel() {
+      const carouselInner = document.getElementById('review-carousel');
+      const totalSlides = carouselInner.children.length;
+      let currentSlide = 0;
+      if (totalSlides === 0) return; // Prevent division by zero
+
+      const goToNextSlide = () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+      };
+      setInterval(goToNextSlide, 5000);
+    }
+
     // Gallery Modal Functions
     const galleryModal = document.getElementById('gallery-modal');
     const galleryModalImage = document.getElementById('gallery-modal-image');
@@ -503,11 +564,13 @@
       currentGalleryIndex = (currentGalleryIndex + 1) % galleryData.length;
       galleryModalImage.src = galleryData[currentGalleryIndex].src;
     }
+
     galleryModal.addEventListener('click', (e) => {
       if (e.target === galleryModal || e.target.classList.contains('modal-button')) {
         closeGalleryModal();
       }
     });
+
     // Menu Modal Functions
     const menuModal = document.getElementById('menu-modal');
     const menuModalImage = document.getElementById('menu-modal-image');
@@ -533,11 +596,13 @@
       currentMenuIndex = (currentMenuIndex + 1) % menuData.images.length;
       menuModalImage.src = menuData.images[currentMenuIndex];
     }
+
     menuModal.addEventListener('click', (e) => {
       if (e.target === menuModal || e.target.classList.contains('modal-button')) {
         closeMenuModal();
       }
     });
+
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
       if (galleryModal.classList.contains('open')) {
@@ -559,6 +624,7 @@
         }
       }
     });
+
     // Random Logo Rotation
     const logo = document.getElementById('logo');
     let lastLogoNumber = 0;
@@ -572,6 +638,7 @@
     };
     setRandomLogo();
     setInterval(setRandomLogo, 4000);
+
     // Mobile Menu Toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -584,17 +651,7 @@
         mobileMenu.classList.add('hidden');
       }
     });
-    // Reviews Carousel
-    document.addEventListener('DOMContentLoaded', () => {
-      const carouselInner = document.getElementById('review-carousel');
-      const totalSlides = carouselInner.children.length;
-      let currentSlide = 0;
-      const goToNextSlide = () => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-      };
-      setInterval(goToNextSlide, 5000);
-    });
+
     // Fetch data when DOM is loaded
     document.addEventListener('DOMContentLoaded', fetchData);
   </script>
