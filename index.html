@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://spinners.pizza">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SSpinners Pizza - Grovespring Missouri">
+  <meta name="twitter:title" content="Spinners Pizza - Grovespring Missouri">
   <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Deliver or Carry-out.">
   <meta name="twitter:image" content="https://spinners.pizza/assets/images/background/1.jpg">
   <meta name="apple-mobile-web-app-title" content="Spinner's Pizza">
@@ -23,7 +23,7 @@
   <meta name="og:image:height" content="630">
   <link rel="icon" type="image/png" href="https://spinners.pizza/assets/images/background/1.jpg" sizes="192x192">
   <meta name="description" content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
-<meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
+  <meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
   <meta name="author" content="Spinners Pizza">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -67,7 +67,6 @@
     .logo-container {
       perspective: 1000px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      border: 4px solid #3b82f6;
       background-color: #ffffff;
       border-radius: 0.5rem;
     }
@@ -169,18 +168,19 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSF3XF4NE6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
   gtag('config', 'G-YSF3XF4NE6');
 </script>
+
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-primary text-secondary fixed w-full z-30 shadow-md header overflow-visible">
     <div class="container mx-auto flex justify-between items-center p-4 relative ">
-      <div class="absolute left-4 top-5 logo-container h-40 w-40 flex items-center justify-center animate-rotate">
-        <img src="https://spinners.pizza/assets/images/logos/1.png?raw=true" id="logo" alt="Spinners Pizza Logo" class="h-full w-full rounded-md object-cover" onerror="this.onerror=null; this.src='https://picsum.photos/160'">
-      </div>
-      <h1 class="text-xl sm:text-2xl font-bold ml-48 mr-4">Spinners Pizza</h1>
+      <!-- Removed Rotating Logo from Header -->
+      <h1 class="text-xl sm:text-2xl font-bold">Spinners Pizza</h1>
       <nav>
         <ul class="hidden md:flex space-x-4">
           <li><a href="#home" class="hover:underline hover:text-tertiary">Home</a></li>
@@ -212,175 +212,97 @@
       </ul>
     </div>
   </header>
+
   <section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('https://spinners.pizza/assets/images/background/current.jpg?raw=true');">
     <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
     <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Welcome to Spinners Pizza!</h2>
+      <!-- Outer Red Border -->
+      <div class="border-4 border-red-600 rounded-full p-2 animate-rotate">
+        <!-- Middle White Border -->
+        <div class="border-4 border-white rounded-full p-2">
+          <!-- Inner Blue Border (Logo Container) -->
+          <div class="border-4 border-tertiary rounded-full">
+            <img src="https://spinners.pizza/assets/images/logos/1.png?raw=true" id="logo" alt="Spinners Pizza Logo" class="h-32 w-32 rounded-full object-cover" onerror="this.onerror=null; this.src='https://picsum.photos/160'">
+          </div>
+        </div>
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-4">Welcome to Spinners Pizza!</h2>
       <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!</p>
       <a href="#menu" class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our Menu</a>
     </div>
   </section>
+
   <section id="about" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">About Spinners Pizza</h3>
-      <img src="https://spinners.pizza/assets/images/logos/98.png?raw=true" class="mx-auto w-1/4 aspect-auto border-4" alt="Spinner">
-      <p class="text-base sm:text-lg">At Spinners Pizza, our passion is crafting delicious pizzas and other menu items with the finest ingredients. Our commitment to quality and community drives us to serve you every day.</p>
-      <p class="mt-4 text-base sm:text-lg">We proudly offer discounts to our heroes – service members, police officers, firefighters, and first responders – as a thank you for their dedication.</p>
+      <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4"></h3>
+      <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4" alt="Spinner">
+      <div id="about-paragraphs">
+        <!-- About paragraphs will be inserted here -->
+      </div>
     </div>
   </section>
+
   <section class="py-12 bg-gray-100">
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row md:space-x-8">
         <div id="hours" class="md:w-1/3 hours-card p-6 mb-8 md:mb-0">
-          <h3 class="text-xl sm:text-2xl font-bold mb-4">Winter Hours</h3>
-          <ul class="text-sm sm:text-base">
-            <li>Monday: 11am - 8pm</li>
-            <li>Tuesday: 11am - 8pm</li>
-            <li>Wednesday: 11am - 3pm</li>
-            <li>Thursday: 11am - 8pm</li>
-            <li>Friday: 11am - 8pm</li>
-            <li>Saturday: 11am - 8pm</li>
-            <li>Sunday: 11am - 6pm</li>
+          <h3 id="hours-title" class="text-xl sm:text-2xl font-bold mb-4"></h3>
+          <ul id="hours-days" class="text-sm sm:text-base">
+            <!-- Hours will be inserted here -->
           </ul>
-          <p class="mt-4 font-semibold text-xs">
-            Please note that these are our winter operating hours. Check back for updates on our regular hours.
-          </p>
-          <p class="mt-4 font-semibold text-xs">
-            We are closed Thanksgiving Day, December 23rd thru December 26th, Easter Sunday, and 4th of July. Tim may have other days.
-          </p>
+          <div id="hours-notes" class="mt-4 font-semibold text-xs">
+            <!-- Notes will be inserted here -->
+          </div>
         </div>
         <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md">
           <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
           <p class="mb-6 text-base sm:text-lg">
             Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <img src="https://spinners.pizza/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true" alt="Walking into Dining Room" class="cursor-pointer rounded-md" onclick="openGalleryModal(0)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=2'">
-            <img src="https://spinners.pizza/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true" alt="Looking at the Counter" class="cursor-pointer rounded-md" onclick="openGalleryModal(1)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=3'">
-            <img src="https://spinners.pizza/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true" alt="Door to Restaurant and Restrooms" class="cursor-pointer rounded-md" onclick="openGalleryModal(2)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=4'">
-            <img src="https://spinners.pizza/assets/images/restaurant/05%20view%20of%20dining%20room%20from%20the%20counter.jpg?raw=true" alt="Dining Room from Counter" class="cursor-pointer rounded-md" onclick="openGalleryModal(3)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=5'">
-            <img src="https://spinners.pizza/assets/images/restaurant/06%20dining%20area.jpg?raw=true" alt="Dining Area 1" class="cursor-pointer rounded-md" onclick="openGalleryModal(4)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=6'">
-            <img src="https://spinners.pizza/assets/images/restaurant/07%20dining%20area.jpg?raw=true" alt="Dining Area 2" class="cursor-pointer rounded-md" onclick="openGalleryModal(5)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=7'">
-            <img src="https://spinners.pizza/assets/images/restaurant/08%20dining%20area.jpg?raw=true" alt="Dining Area 3" class="cursor-pointer rounded-md" onclick="openGalleryModal(6)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=8'">
+          <div id="gallery-images" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Gallery images will be inserted here -->
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section id="menu" class="py-12 bg-tertiary-light">
     <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8">~ Welcome to Our All-American Menu ~</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">House Specials</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Chicken Alfredo</li>
-            <li>Homemade Lasagna</li>
-            <li>Fried Fish (Served 7 Days a Week)</li>
-            <li>Fried Frog Legs (Served 7 Days a Week)</li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Appetizers</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Mac 'n Cheese Bacon Nuggets</li>
-            <li>Jalapeño Poppers</li>
-            <li>Mozzarella Sticks</li>
-            <li>Chicken Wings</li>
-            <li>Garlic Breadsticks</li>
-            <li>Garlic Cheese Bread</li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Salads</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Side Salad</li>
-            <li>Chef Salad</li>
-            <li>Fajita Chicken Salad</li>
-            <li>Taco Salad</li>
-          </ul>
-        </div>
-        <div class="bg-white p-6 rounded-md shadow-md border border-blue-500">
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4">Create Your Own Pizza</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Original Hand Tossed</li>
-            <li>Gluten-Free</li>
-            <li>Add Your Favorite Toppings</li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Specialty Pizzas</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>A-1 Steak Pizza</li>
-            <li>Bacon Cheeseburger Pizza</li>
-            <li>BBQ Chicken Pizza</li>
-            <li>Hawaiian Pizza</li>
-            <li>Cheesy Potato Delight</li>
-            <li>Alfredo Chicken Pizza</li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Burgers</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Spinner Special Smoked Burger</li>
-            <li>Radar Burger</li>
-            <li>Hawaiian Burger</li>
-            <li>Big & Wolf Burger</li>
-            <li>Hoagie Burgers - Special rectangular burgers that perfectly fit on a hoagie bun</li>
-          </ul>
-          <h4 class="text-xl sm:text-2xl font-semibold text-blue-600 mt-8 mb-4">Desserts & Drinks</h4>
-          <ul class="list-disc ml-4 text-gray-800">
-            <li>Cookies</li>
-            <li>Fountain Drinks</li>
-            <li>Bottled Beverages</li>
-          </ul>
-        </div>
+      <h3 id="menu-title" class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8"></h3>
+      <div id="menu-sections" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Menu sections will be inserted here -->
       </div>
-      <div class="text-center mt-8 text-blue-600 font-bold">
-        <span class="text-red-600">★</span> Famous for Fried Fish & Frog Legs <span class="text-red-600">★</span>
+      <div id="menu-note" class="text-center mt-8 text-blue-600 font-bold">
+        <!-- Menu note will be inserted here -->
       </div>
       <div class="mt-8">
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          <img src="https://spinners.pizza/assets/images/menu/menu1.jpg?raw=true" alt="Menu Image 1" class="cursor-pointer rounded-md" onclick="openMenuModal(0)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=9'">
-          <img src="https://spinners.pizza/assets/images/menu/menu2.jpg?raw=true" alt="Menu Image 2" class="cursor-pointer rounded-md" onclick="openMenuModal(1)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=10'">
-          <img src="https://spinners.pizza/assets/images/menu/menu3.jpg?raw=true" alt="Menu Image 3" class="cursor-pointer rounded-md" onclick="openMenuModal(2)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=11'">
-          <img src="https://spinners.pizza/assets/images/menu/menu4.jpg?raw=true" alt="Menu Image 4" class="cursor-pointer rounded-md" onclick="openMenuModal(3)" onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=12'">
+        <div id="menu-images" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <!-- Menu images will be inserted here -->
         </div>
       </div>
     </div>
   </section>
+
   <section id="reviews" class="py-12 bg-gray-50">
     <div class="container mx-auto text-center px-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-4">Customer Reviews</h3>
       <p class="text-base sm:text-lg mb-6">Read what our customers have to say!</p>
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
         <div id="review-carousel" class="flex transition-transform duration-1000 ease-in-out">
-          <a href="https://maps.app.goo.gl/8FukpDRr5WbMhpGTA" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
-            <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
-              <p class="italic text-lg">"The food was great! Had a side salad, garlic cheese sticks, and a small deluxe pizza! Everything was super fresh and super tasty! The two young girls that were working were nice and attentive! Would definitely recommend! Stop by if you are close!"</p>
-              <p class="mt-4 font-semibold">- Ashley Alderson</p>
-            </div>
-          </a>
-          <a href="https://maps.app.goo.gl/jsMFxSnMSP1J1sbFA" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
-            <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
-              <p class="italic text-lg">"Delicious pizza! The BBQ Chicken bacon ranch pizza was amazing. Great service as well. Will be going back soon."</p>
-              <p class="mt-4 font-semibold">- Charlie Maddux</p>
-            </div>
-          </a>
-          <a href="https://maps.app.goo.gl/QCYmuxvz9aaXoYar9" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
-            <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
-              <p class="italic text-lg">"The pizza was amazing! If you are looking for a great thin crust pizza! We will be coming back!"</p>
-              <p class="mt-4 font-semibold">- Eva Hlubik</p>
-            </div>
-          </a>
-          <a href="https://maps.app.goo.gl/PFfH7PBL77W7xKK69" class="w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6">
-            <div class="bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center">
-              <p class="italic text-lg">"This place is awesome! The fried catfish was perfect. The menu selection is so large that everyone will find a favorite."</p>
-              <p class="mt-4 font-semibold">- Elizabeth Meyer</p>
-            </div>
-          </a>
+          <!-- Reviews will be inserted here -->
         </div>
       </div>
     </div>
   </section>
+
   <section id="discounts" class="py-12 bg-primary text-secondary">
     <div class="container mx-auto text-center px-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-4">Discounts for Our Heroes</h3>
       <p class="text-base sm:text-lg">We honor our service members, police officers, firefighters, and first responders with special discounts as a token of our appreciation.</p>
     </div>
   </section>
+
   <section id="contact" class="py-12 bg-white">
     <div class="container mx-auto px-6">
       <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come on out!</h3>
@@ -395,6 +317,7 @@
       </div>
     </div>
   </section>
+
   <footer class="bg-gray-800 text-secondary text-center p-4">
     <p>© 2024 Spinners Pizza. All rights reserved.</p>
   </footer>
@@ -420,23 +343,148 @@
   </div>
 
   <script>
-    // Gallery Images
-    const galleryImages = [
-      "https://spinners.pizza/assets/images/restaurant/02%20walking%20in%20from%20front%20door%20looking%20at%20the%20dining%20room.jpg?raw=true",
-      "https://spinners.pizza/assets/images/restaurant/03%20straight%20from%20the%20entrance%20looking%20at%20the%20counter.jpg?raw=true",
-      "https://spinners.pizza/assets/images/restaurant/04%20view%20from%20counter%20looking%20at%20the%20door%20to%20the%20restaurant%20and%20the%20restrooms.jpg?raw=true",
-      "https://spinners.pizza/assets/images/restaurant/05%20view%20of%20dining%20room%20from%20the%20counter.jpg?raw=true",
-      "https://spinners.pizza/assets/images/restaurant/06%20dining%20area.jpg?raw=true",
-      "https://spinners.pizza/assets/images/restaurant/07%20dining%20area.jpg?raw=true",
-      "https://spinners.pizza/assets/images/restaurant/08%20dining%20area.jpg?raw=true",
-    ];
+    // Variables to hold data
+    let aboutData = {};
+    let hoursData = {};
+    let galleryData = [];
+    let menuData = {};
+    let reviewsData = [];
+    // Fetch JSON Data
+    async function fetchData() {
+      try {
+        const aboutResponse = await fetch('https://spinners.pizza/data/about.json');
+        aboutData = await aboutResponse.json();
+        const hoursResponse = await fetch('https://spinners.pizza/data/hours.json');
+        hoursData = await hoursResponse.json();
+        const galleryResponse = await fetch('https://spinners.pizza/data/gallery.json');
+        galleryData = await galleryResponse.json();
+        const menuResponse = await fetch('https://spinners.pizza/data/menu.json');
+        menuData = await menuResponse.json();
+        const reviewsResponse = await fetch('https://spinners.pizza/data/reviews.json');
+        reviewsData = await reviewsResponse.json();
+        populateAboutSection();
+        populateHoursSection();
+        populateGallerySection();
+        populateMenuSection();
+        populateReviewsSection();
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+    // Populate About Section
+    function populateAboutSection() {
+      document.getElementById('about-title').textContent = aboutData.title;
+      const aboutImage = document.getElementById('about-image');
+      aboutImage.src = aboutData.image;
+      aboutImage.alt = 'About Image';
+      const aboutParagraphs = document.getElementById('about-paragraphs');
+      aboutData.paragraphs.forEach(paragraph => {
+        const p = document.createElement('p');
+        p.className = 'text-base sm:text-lg';
+        p.textContent = paragraph;
+        aboutParagraphs.appendChild(p);
+      });
+    }
+    // Populate Hours Section
+    function populateHoursSection() {
+      document.getElementById('hours-title').textContent = hoursData.title;
+      const hoursDays = document.getElementById('hours-days');
+      hoursData.days.forEach(day => {
+        const li = document.createElement('li');
+        li.textContent = `${day.day}: ${day.hours}`;
+        hoursDays.appendChild(li);
+      });
+      const hoursNotes = document.getElementById('hours-notes');
+      hoursData.notes.forEach(note => {
+        const p = document.createElement('p');
+        p.textContent = note;
+        hoursNotes.appendChild(p);
+      });
+    }
+    // Populate Gallery Section
     let currentGalleryIndex = 0;
+
+    function populateGallerySection() {
+      const galleryImagesDiv = document.getElementById('gallery-images');
+      galleryData.forEach((image, index) => {
+        const img = document.createElement('img');
+        img.src = image.src;
+        img.alt = image.alt;
+        img.className = 'cursor-pointer rounded-md';
+        img.onclick = () => openGalleryModal(index);
+        img.onerror = function() {
+          this.onerror = null;
+          this.src = `https://picsum.photos/400/300?random=${index + 2}`;
+        };
+        galleryImagesDiv.appendChild(img);
+      });
+    }
+    // Populate Menu Section
+    let currentMenuIndex = 0;
+
+    function populateMenuSection() {
+      document.getElementById('menu-title').textContent = menuData.title;
+      const menuSectionsDiv = document.getElementById('menu-sections');
+      menuData.sections.forEach((section, index) => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'bg-white p-6 rounded-md shadow-md border border-blue-500';
+        const h4 = document.createElement('h4');
+        h4.className = 'text-xl sm:text-2xl font-semibold text-blue-600 mb-4';
+        h4.textContent = section.title;
+        sectionDiv.appendChild(h4);
+        const ul = document.createElement('ul');
+        ul.className = 'list-disc ml-4 text-gray-800';
+        section.items.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          ul.appendChild(li);
+        });
+        sectionDiv.appendChild(ul);
+        menuSectionsDiv.appendChild(sectionDiv);
+      });
+      document.getElementById('menu-note').innerHTML = menuData.note;
+      const menuImagesDiv = document.getElementById('menu-images');
+      menuData.images.forEach((src, index) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Menu Image ${index + 1}`;
+        img.className = 'cursor-pointer rounded-md';
+        img.onclick = () => openMenuModal(index);
+        img.onerror = function() {
+          this.onerror = null;
+          this.src = `https://picsum.photos/400/300?random=${index + 9}`;
+        };
+        menuImagesDiv.appendChild(img);
+      });
+    }
+    // Populate Reviews Section
+    function populateReviewsSection() {
+      const reviewCarousel = document.getElementById('review-carousel');
+      reviewsData.forEach(review => {
+        const a = document.createElement('a');
+        a.href = review.href;
+        a.className = 'w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6';
+        const div = document.createElement('div');
+        div.className = 'bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center';
+        const pReview = document.createElement('p');
+        pReview.className = 'italic text-lg';
+        pReview.textContent = `"${review.review}"`;
+        div.appendChild(pReview);
+        const pAuthor = document.createElement('p');
+        pAuthor.className = 'mt-4 font-semibold';
+        pAuthor.textContent = `- ${review.author}`;
+        div.appendChild(pAuthor);
+        a.appendChild(div);
+        reviewCarousel.appendChild(a);
+      });
+    }
+    // Gallery Modal Functions
     const galleryModal = document.getElementById('gallery-modal');
     const galleryModalImage = document.getElementById('gallery-modal-image');
 
     function openGalleryModal(index) {
       currentGalleryIndex = index;
-      galleryModalImage.src = galleryImages[currentGalleryIndex];
+      galleryModalImage.src = galleryData[currentGalleryIndex].src;
       galleryModal.classList.add('open');
       document.body.classList.add('modal-open');
     }
@@ -447,35 +495,26 @@
     }
 
     function prevGalleryImage() {
-      currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
-      galleryModalImage.src = galleryImages[currentGalleryIndex];
+      currentGalleryIndex = (currentGalleryIndex - 1 + galleryData.length) % galleryData.length;
+      galleryModalImage.src = galleryData[currentGalleryIndex].src;
     }
 
     function nextGalleryImage() {
-      currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
-      galleryModalImage.src = galleryImages[currentGalleryIndex];
+      currentGalleryIndex = (currentGalleryIndex + 1) % galleryData.length;
+      galleryModalImage.src = galleryData[currentGalleryIndex].src;
     }
-
     galleryModal.addEventListener('click', (e) => {
       if (e.target === galleryModal || e.target.classList.contains('modal-button')) {
         closeGalleryModal();
       }
     });
-
-    // Menu Images
-    const menuImages = [
-      "https://spinners.pizza/assets/images/menu/menu1.jpg?raw=true",
-      "https://spinners.pizza/assets/images/menu/menu2.jpg?raw=true",
-      "https://spinners.pizza/assets/images/menu/menu3.jpg?raw=true",
-      "https://spinners.pizza/assets/images/menu/menu4.jpg?raw=true",
-    ];
-    let currentMenuIndex = 0;
+    // Menu Modal Functions
     const menuModal = document.getElementById('menu-modal');
     const menuModalImage = document.getElementById('menu-modal-image');
 
     function openMenuModal(index) {
       currentMenuIndex = index;
-      menuModalImage.src = menuImages[currentMenuIndex];
+      menuModalImage.src = menuData.images[currentMenuIndex];
       menuModal.classList.add('open');
       document.body.classList.add('modal-open');
     }
@@ -486,21 +525,19 @@
     }
 
     function prevMenuImage() {
-      currentMenuIndex = (currentMenuIndex - 1 + menuImages.length) % menuImages.length;
-      menuModalImage.src = menuImages[currentMenuIndex];
+      currentMenuIndex = (currentMenuIndex - 1 + menuData.images.length) % menuData.images.length;
+      menuModalImage.src = menuData.images[currentMenuIndex];
     }
 
     function nextMenuImage() {
-      currentMenuIndex = (currentMenuIndex + 1) % menuImages.length;
-      menuModalImage.src = menuImages[currentMenuIndex];
+      currentMenuIndex = (currentMenuIndex + 1) % menuData.images.length;
+      menuModalImage.src = menuData.images[currentMenuIndex];
     }
-
     menuModal.addEventListener('click', (e) => {
       if (e.target === menuModal || e.target.classList.contains('modal-button')) {
         closeMenuModal();
       }
     });
-
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
       if (galleryModal.classList.contains('open')) {
@@ -522,7 +559,6 @@
         }
       }
     });
-
     // Random Logo Rotation
     const logo = document.getElementById('logo');
     let lastLogoNumber = 0;
@@ -536,7 +572,6 @@
     };
     setRandomLogo();
     setInterval(setRandomLogo, 4000);
-
     // Mobile Menu Toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -544,13 +579,11 @@
       e.stopPropagation();
       mobileMenu.classList.toggle('hidden');
     });
-
     document.addEventListener('click', (event) => {
       if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
         mobileMenu.classList.add('hidden');
       }
     });
-
     // Reviews Carousel
     document.addEventListener('DOMContentLoaded', () => {
       const carouselInner = document.getElementById('review-carousel');
@@ -562,6 +595,8 @@
       };
       setInterval(goToNextSlide, 5000);
     });
+    // Fetch data when DOM is loaded
+    document.addEventListener('DOMContentLoaded', fetchData);
   </script>
 </body>
 
