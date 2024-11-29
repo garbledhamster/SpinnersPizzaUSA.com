@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
   <title>Spinners Pizza - Grovespring Missouri</title>
-  <link rel="icon" href="https://spinners.pizza/assets/images/background/1.png">
+  <link rel="icon" href="https://spinners.pizza/assets/images/background/1.jpg">
 
   <!-- Google Fonts: Lora -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,20 +15,20 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Spinners Pizza - Grovespring Missouri">
   <meta property="og:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
-  <meta property="og:image" content="https://spinners.pizza/assets/images/background/1.png">
+  <meta property="og:image" content="https://spinners.pizza/assets/images/background/1.jpg">
   <meta property="og:url" content="https://spinners.pizza">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Spinners Pizza - Grovespring Missouri">
   <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
-  <meta name="twitter:image" content="https://spinners.pizza/assets/images/background/1.png">
+  <meta name="twitter:image" content="https://spinners.pizza/assets/images/background/1.jpg">
   <meta name="apple-mobile-web-app-title" content="Spinner's Pizza">
-  <link rel="apple-touch-icon" href="https://spinners.pizza/assets/images/background/1.png">
+  <link rel="apple-touch-icon" href="https://spinners.pizza/assets/images/background/1.jpg">
   <meta property="og:site_name" content="Spinners Pizza - Grovespring Missouri">
   <meta property="og:locale" content="en_US">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <link rel="icon" type="image/png" href="https://spinners.pizza/assets/images/background/1.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://spinners.pizza/assets/images/background/1.jpg" sizes="192x192">
   <meta name="description" content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
   <meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
   <meta name="author" content="Spinners Pizza">
@@ -221,7 +221,6 @@
         <ul class="hidden md:flex space-x-4">
           <li><a href="#home" class="hover:underline hover:text-tertiary">Home</a></li>
           <li><a href="#about" class="hover:underline hover:text-tertiary">About Us</a></li>
-          <li><a href="#gallery" class="hover:underline hover:text-tertiary">Gallery</a></li>
           <li><a href="#hours" class="hover:underline hover:text-tertiary">Hours</a></li>
           <li><a href="#menu" class="hover:underline hover:text-tertiary">Menu</a></li>
           <li><a href="#reviews" class="hover:underline hover:text-tertiary">Reviews</a></li>
@@ -249,7 +248,8 @@
     </div>
   </header>
 
-  <section id="home" class="bg-cover bg-center h-screen relative" style="background-image: url('https://spinners.pizza/assets/images/background/current.jpg?raw=true');">
+  <!-- Home Section -->
+  <section id="home" class="bg-cover bg-center h-screen relative scroll-mt-16" style="background-image: url('https://spinners.pizza/assets/images/background/current.jpg?raw=true');">
     <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
     <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
       <!-- Outer Red Border -->
@@ -268,7 +268,8 @@
     </div>
   </section>
 
-  <section id="about" class="py-12 bg-gray-50">
+  <!-- About Section -->
+  <section id="about" class="py-12 bg-gray-50 scroll-mt-16">
     <div class="container mx-auto text-center px-6">
       <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4"></h3>
       <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4 transition-transform duration-300 transform hover:scale-105 rounded-md cursor-pointer" alt="Spinner">
@@ -278,10 +279,12 @@
     </div>
   </section>
 
+  <!-- Hours and Gallery Section -->
   <section class="py-12 bg-gray-100">
     <div class="container mx-auto px-6">
       <div class="flex flex-col md:flex-row md:space-x-8">
-        <div id="hours" class="md:w-1/3 hours-card p-6 mb-8 md:mb-0">
+        <!-- Hours Section (Nested Div with scroll-mt-16) -->
+        <div id="hours" class="md:w-1/3 hours-card p-6 mb-8 md:mb-0 scroll-mt-16">
           <h3 id="hours-title" class="text-xl sm:text-2xl font-bold mb-4"></h3>
           <ul id="hours-days" class="text-sm sm:text-base">
             <!-- Hours will be inserted here -->
@@ -290,7 +293,9 @@
             <!-- Notes will be inserted here -->
           </div>
         </div>
-        <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md">
+
+        <!-- Gallery Section (Nested Div with scroll-mt-16) -->
+        <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md scroll-mt-16">
           <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
           <p class="mb-6 text-base sm:text-lg">
             Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!
@@ -303,7 +308,8 @@
     </div>
   </section>
 
-  <section id="menu" class="py-12 bg-tertiary-light">
+  <!-- Menu Section -->
+  <section id="menu" class="py-12 bg-tertiary-light scroll-mt-16">
     <div class="container mx-auto px-6">
       <h3 id="menu-title" class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8"></h3>
       <div id="menu-sections" class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -320,7 +326,8 @@
     </div>
   </section>
 
-  <section id="reviews" class="py-12 bg-gray-50">
+  <!-- Reviews Section -->
+  <section id="reviews" class="py-12 bg-gray-50 scroll-mt-16">
     <div class="container mx-auto text-center px-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-4">Customer Reviews</h3>
       <p class="text-base sm:text-lg mb-6">Read what our customers have to say!</p>
@@ -332,14 +339,16 @@
     </div>
   </section>
 
-  <section id="discounts" class="py-12 bg-primary text-secondary">
+  <!-- Discounts Section -->
+  <section id="discounts" class="py-12 bg-primary text-secondary scroll-mt-16">
     <div class="container mx-auto text-center px-6">
       <h3 class="text-2xl sm:text-3xl font-bold mb-4">Discounts for Our Heroes</h3>
       <p class="text-base sm:text-lg">We honor our service members, police officers, firefighters, and first responders with special discounts as a token of our appreciation.</p>
     </div>
   </section>
 
-  <section id="contact" class="py-12 bg-white">
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 bg-white scroll-mt-16">
     <div class="container mx-auto px-6">
       <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come on out!</h3>
       <div class="text-center">
@@ -385,7 +394,6 @@
     let galleryData = [];
     let menuData = {};
     let reviewsData = [];
-
     // Fetch JSON Data
     async function fetchData() {
       try {
@@ -399,7 +407,6 @@
         menuData = await menuResponse.json();
         const reviewsResponse = await fetch('https://spinners.pizza/data/reviews.json');
         reviewsData = await reviewsResponse.json();
-
         populateAboutSection();
         populateHoursSection();
         populateGallerySection();
@@ -410,7 +417,6 @@
         console.error('Error fetching data:', error);
       }
     }
-
     // Populate About Section
     function populateAboutSection() {
       document.getElementById('about-title').textContent = aboutData.title;
@@ -425,7 +431,6 @@
         aboutParagraphs.appendChild(p);
       });
     }
-
     // Populate Hours Section
     function populateHoursSection() {
       document.getElementById('hours-title').textContent = hoursData.title;
@@ -442,7 +447,6 @@
         hoursNotes.appendChild(p);
       });
     }
-
     // Populate Gallery Section
     let currentGalleryIndex = 0;
 
@@ -455,14 +459,13 @@
         // Tailwind classes for hover zoom
         img.className = 'cursor-pointer rounded-md transition-transform duration-300 transform hover:scale-105';
         img.onclick = () => openGalleryModal(index);
-        img.onerror = function () {
+        img.onerror = function() {
           this.onerror = null;
           this.src = `https://picsum.photos/400/300?random=${index + 2}`;
         };
         galleryImagesDiv.appendChild(img);
       });
     }
-
     // Populate Menu Section
     let currentMenuIndex = 0;
 
@@ -495,14 +498,13 @@
         // Tailwind classes for hover zoom
         img.className = 'cursor-pointer rounded-md transition-transform duration-300 transform hover:scale-105';
         img.onclick = () => openMenuModal(index);
-        img.onerror = function () {
+        img.onerror = function() {
           this.onerror = null;
           this.src = `https://picsum.photos/400/300?random=${index + 9}`;
         };
         menuImagesDiv.appendChild(img);
       });
     }
-
     // Populate Reviews Section
     function populateReviewsSection() {
       const reviewCarousel = document.getElementById('review-carousel');
@@ -524,21 +526,18 @@
         reviewCarousel.appendChild(a);
       });
     }
-
     // Initialize Reviews Carousel after populating reviews
     function initializeReviewCarousel() {
       const carouselInner = document.getElementById('review-carousel');
       const totalSlides = carouselInner.children.length;
       let currentSlide = 0;
       if (totalSlides === 0) return; // Prevent division by zero
-
       const goToNextSlide = () => {
         currentSlide = (currentSlide + 1) % totalSlides;
         carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
       };
       setInterval(goToNextSlide, 5000);
     }
-
     // Gallery Modal Functions
     const galleryModal = document.getElementById('gallery-modal');
     const galleryModalImage = document.getElementById('gallery-modal-image');
@@ -564,13 +563,11 @@
       currentGalleryIndex = (currentGalleryIndex + 1) % galleryData.length;
       galleryModalImage.src = galleryData[currentGalleryIndex].src;
     }
-
     galleryModal.addEventListener('click', (e) => {
       if (e.target === galleryModal || e.target.classList.contains('modal-button')) {
         closeGalleryModal();
       }
     });
-
     // Menu Modal Functions
     const menuModal = document.getElementById('menu-modal');
     const menuModalImage = document.getElementById('menu-modal-image');
@@ -596,13 +593,11 @@
       currentMenuIndex = (currentMenuIndex + 1) % menuData.images.length;
       menuModalImage.src = menuData.images[currentMenuIndex];
     }
-
     menuModal.addEventListener('click', (e) => {
       if (e.target === menuModal || e.target.classList.contains('modal-button')) {
         closeMenuModal();
       }
     });
-
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
       if (galleryModal.classList.contains('open')) {
@@ -624,7 +619,6 @@
         }
       }
     });
-
     // Random Logo Rotation
     const logo = document.getElementById('logo');
     let lastLogoNumber = 0;
@@ -638,7 +632,6 @@
     };
     setRandomLogo();
     setInterval(setRandomLogo, 4000);
-
     // Mobile Menu Toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -651,7 +644,6 @@
         mobileMenu.classList.add('hidden');
       }
     });
-
     // Fetch data when DOM is loaded
     document.addEventListener('DOMContentLoaded', fetchData);
   </script>
