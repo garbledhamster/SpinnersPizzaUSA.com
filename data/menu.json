@@ -1,0 +1,78 @@
+{
+  "title": "~ Welcome to Our All-American Menu ~",
+  "sections": [
+    {
+      "title": "House Specials",
+      "items": [
+        "Chicken Alfredo",
+        "Homemade Lasagna",
+        "Fried Fish (Served 7 Days a Week)",
+        "Fried Frog Legs (Served 7 Days a Week)"
+      ]
+    },
+    {
+      "title": "Appetizers",
+      "items": [
+        "Mac 'n Cheese Bacon Nuggets",
+        "Jalapeño Poppers",
+        "Mozzarella Sticks",
+        "Chicken Wings",
+        "Garlic Breadsticks",
+        "Garlic Cheese Bread"
+      ]
+    },
+    {
+      "title": "Salads",
+      "items": [
+        "Side Salad",
+        "Chef Salad",
+        "Fajita Chicken Salad",
+        "Taco Salad"
+      ]
+    },
+    {
+      "title": "Create Your Own Pizza",
+      "items": [
+        "Original Hand Tossed",
+        "Gluten-Free",
+        "Add Your Favorite Toppings"
+      ]
+    },
+    {
+      "title": "Specialty Pizzas",
+      "items": [
+        "A-1 Steak Pizza",
+        "Bacon Cheeseburger Pizza",
+        "BBQ Chicken Pizza",
+        "Hawaiian Pizza",
+        "Cheesy Potato Delight",
+        "Alfredo Chicken Pizza"
+      ]
+    },
+    {
+      "title": "Burgers",
+      "items": [
+        "Spinner Special Smoked Burger",
+        "Radar Burger",
+        "Hawaiian Burger",
+        "Big & Wolf Burger",
+        "Hoagie Burgers - Special rectangular burgers that perfectly fit on a hoagie bun"
+      ]
+    },
+    {
+      "title": "Desserts & Drinks",
+      "items": [
+        "Cookies",
+        "Fountain Drinks",
+        "Bottled Beverages"
+      ]
+    }
+  ],
+  "note": "★ Famous for Fried Fish & Frog Legs ★",
+  "images": [
+    "https://spinners.pizza/assets/images/menu/menu1.jpg?raw=true",
+    "https://spinners.pizza/assets/images/menu/menu2.jpg?raw=true",
+    "https://spinners.pizza/assets/images/menu/menu3.jpg?raw=true",
+    "https://spinners.pizza/assets/images/menu/menu4.jpg?raw=true"
+  ]
+}
