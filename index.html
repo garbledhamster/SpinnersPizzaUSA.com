@@ -272,7 +272,7 @@
   <section id="about" class="py-12 bg-gray-50 scroll-mt-16">
     <div class="container mx-auto text-center px-6">
       <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4"></h3>
-      <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4 transition-transform duration-300 transform hover:scale-105 rounded-md cursor-pointer" alt="Spinner">
+      <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4 transition-transform duration-300 transform hover:scale-105 rounded-md cursor-pointer" alt="About Image">
       <div id="about-paragraphs">
         <!-- About paragraphs will be inserted here -->
       </div>
@@ -313,7 +313,7 @@
     <div class="container mx-auto px-6">
       <h3 id="menu-title" class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8"></h3>
       <div id="menu-sections" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Menu sections will be inserted here -->
+        <!-- Menu sections will be inserted dynamically -->
       </div>
       <div id="menu-note" class="text-center mt-8 text-blue-600 font-bold">
         <!-- Menu note will be inserted here -->
@@ -461,35 +461,51 @@
         img.onclick = () => openGalleryModal(index);
         img.onerror = function() {
           this.onerror = null;
-          this.src = `https://picsum.photos/400/300?random=${index + 2}`;
+          this.src = `https://picsum.photos/600/400?random=${index + 20}`;
         };
         galleryImagesDiv.appendChild(img);
       });
     }
-    // Populate Menu Section
-    let currentMenuIndex = 0;
-
+    // Populate Menu Section with Images
     function populateMenuSection() {
       document.getElementById('menu-title').textContent = menuData.title;
       const menuSectionsDiv = document.getElementById('menu-sections');
       menuData.sections.forEach((section, index) => {
         const sectionDiv = document.createElement('div');
         sectionDiv.className = 'bg-white p-6 rounded-md shadow-md border border-blue-500';
+
+        // Add thumbnail image
+        const img = document.createElement('img');
+        img.src = section.photo;
+        img.alt = `${section.title} Thumbnail`;
+        img.className = 'w-full rounded-t-md mb-4';
+        img.onerror = function () {
+          this.onerror = null;
+          this.src = `https://picsum.photos/400/300?random=${index + 100}`;
+        };
+        sectionDiv.appendChild(img);
+
+        // Add section title
         const h4 = document.createElement('h4');
         h4.className = 'text-xl sm:text-2xl font-semibold text-blue-600 mb-4';
         h4.textContent = section.title;
         sectionDiv.appendChild(h4);
+
+        // Add list of items
         const ul = document.createElement('ul');
         ul.className = 'list-disc ml-4 text-gray-800';
-        section.items.forEach(item => {
+        section.items.forEach((item) => {
           const li = document.createElement('li');
           li.textContent = item;
           ul.appendChild(li);
         });
         sectionDiv.appendChild(ul);
+
         menuSectionsDiv.appendChild(sectionDiv);
       });
-      document.getElementById('menu-note').innerHTML = menuData.note;
+      document.getElementById('menu-note').textContent = menuData.note;
+
+      // Optionally, add menu images below sections
       const menuImagesDiv = document.getElementById('menu-images');
       menuData.images.forEach((src, index) => {
         const img = document.createElement('img');
@@ -498,9 +514,9 @@
         // Tailwind classes for hover zoom
         img.className = 'cursor-pointer rounded-md transition-transform duration-300 transform hover:scale-105';
         img.onclick = () => openMenuModal(index);
-        img.onerror = function() {
+        img.onerror = function () {
           this.onerror = null;
-          this.src = `https://picsum.photos/400/300?random=${index + 9}`;
+          this.src = `https://picsum.photos/400/300?random=${index + 200}`;
         };
         menuImagesDiv.appendChild(img);
       });
@@ -510,7 +526,7 @@
       const reviewCarousel = document.getElementById('review-carousel');
       reviewsData.forEach(review => {
         const a = document.createElement('a');
-        a.href = review.href || '#';
+        a.href = "#"; // You can link to a detailed review page if available
         a.className = 'w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6 review-item';
         const div = document.createElement('div');
         div.className = 'bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center';
@@ -568,6 +584,7 @@
         closeGalleryModal();
       }
     });
+
     // Menu Modal Functions
     const menuModal = document.getElementById('menu-modal');
     const menuModalImage = document.getElementById('menu-modal-image');
@@ -598,6 +615,7 @@
         closeMenuModal();
       }
     });
+
     // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
       if (galleryModal.classList.contains('open')) {
@@ -619,6 +637,7 @@
         }
       }
     });
+
     // Random Logo Rotation
     const logo = document.getElementById('logo');
     let lastLogoNumber = 0;
@@ -632,6 +651,7 @@
     };
     setRandomLogo();
     setInterval(setRandomLogo, 4000);
+
     // Mobile Menu Toggle
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -644,7 +664,43 @@
         mobileMenu.classList.add('hidden');
       }
     });
-    // Fetch data when DOM is loaded
+
+    // Populate Reviews Carousel
+    function populateReviewsSection() {
+      const reviewCarousel = document.getElementById('review-carousel');
+      reviewsData.forEach(review => {
+        const a = document.createElement('a');
+        a.href = "#"; // You can link to a detailed review page if available
+        a.className = 'w-full flex-shrink-0 flex flex-col items-center justify-center text-center p-6 review-item';
+        const div = document.createElement('div');
+        div.className = 'bg-white p-8 rounded-md shadow-md h-full flex flex-col items-center justify-center';
+        const pReview = document.createElement('p');
+        pReview.className = 'italic text-lg';
+        pReview.textContent = `"${review.review}"`;
+        div.appendChild(pReview);
+        const pAuthor = document.createElement('p');
+        pAuthor.className = 'mt-4 font-semibold';
+        pAuthor.textContent = `- ${review.author}`;
+        div.appendChild(pAuthor);
+        a.appendChild(div);
+        reviewCarousel.appendChild(a);
+      });
+    }
+
+    // Initialize Reviews Carousel after populating reviews
+    function initializeReviewCarousel() {
+      const carouselInner = document.getElementById('review-carousel');
+      const totalSlides = carouselInner.children.length;
+      let currentSlide = 0;
+      if (totalSlides === 0) return; // Prevent division by zero
+      const goToNextSlide = () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+      };
+      setInterval(goToNextSlide, 5000);
+    }
+
+    // Initialize All Sections After DOM is Loaded
     document.addEventListener('DOMContentLoaded', fetchData);
   </script>
 </body>
