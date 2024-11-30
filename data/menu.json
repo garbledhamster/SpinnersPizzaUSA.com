@@ -3,7 +3,7 @@
   "sections": [
     {
       "title": "House Specials",
-      "photo": "https://picsum.photos/400/300?random=1",
+      "photo": "https://images.pexels.com/photos/1352270/pexels-photo-1352270.jpeg?auto=compress&cs=tinysrgb&w=600",
       "items": [
         "Chicken Alfredo",
         "Homemade Lasagna",
@@ -13,7 +13,7 @@
     },
     {
       "title": "Appetizers",
-      "photo": "https://picsum.photos/400/300?random=2",
+      "photo": "https://images.pexels.com/photos/6941027/pexels-photo-6941027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "items": [
         "Mac 'n Cheese Bacon Nuggets",
         "Jalapeño Poppers",
@@ -25,7 +25,7 @@
     },
     {
       "title": "Salads",
-      "photo": "https://picsum.photos/400/300?random=3",
+      "photo": "https://images.pexels.com/photos/806361/pexels-photo-806361.jpeg?auto=compress&cs=tinysrgb&w=600",
       "items": [
         "Side Salad",
         "Chef Salad",
@@ -35,7 +35,7 @@
     },
     {
       "title": "Create Your Own Pizza",
-      "photo": "https://picsum.photos/400/300?random=4",
+      "photo": "https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=600",
       "items": [
         "Original Hand Tossed",
         "Gluten-Free",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Specialty Pizzas",
-      "photo": "https://picsum.photos/400/300?random=5",
+      "photo": "https://images.pexels.com/photos/26575499/pexels-photo-26575499/free-photo-of-pizza-with-meat-and-vegetables.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "items": [
         "A-1 Steak Pizza",
         "Bacon Cheeseburger Pizza",
@@ -56,18 +56,19 @@
     },
     {
       "title": "Burgers",
-      "photo": "https://picsum.photos/400/300?random=6",
+      "photo": "https://images.pexels.com/photos/19247563/pexels-photo-19247563/free-photo-of-burger-and-french-fries-served-in-a-restaurant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "items": [
+        "Hoagie Burgers - All spinners patties rectangular to fit on a hoagie bun",
         "Spinner Special Smoked Burger",
         "Radar Burger",
         "Hawaiian Burger",
-        "Big & Wolf Burger",
-        "Hoagie Burgers - Special rectangular burgers that perfectly fit on a hoagie bun"
+        "Big & Wolf Burger"
+        
       ]
     },
     {
       "title": "Desserts & Drinks",
-      "photo": "https://picsum.photos/400/300?random=7",
+      "photo": "https://images.pexels.com/photos/13815328/pexels-photo-13815328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "items": [
         "Cookies",
         "Fountain Drinks",
