@@ -3,6 +3,7 @@
   "sections": [
     {
       "title": "House Specials",
+      "photo": "https://picsum.photos/400/300?random=1",
       "items": [
         "Chicken Alfredo",
         "Homemade Lasagna",
@@ -12,6 +13,7 @@
     },
     {
       "title": "Appetizers",
+      "photo": "https://picsum.photos/400/300?random=2",
       "items": [
         "Mac 'n Cheese Bacon Nuggets",
         "Jalapeño Poppers",
@@ -23,6 +25,7 @@
     },
     {
       "title": "Salads",
+      "photo": "https://picsum.photos/400/300?random=3",
       "items": [
         "Side Salad",
         "Chef Salad",
@@ -32,6 +35,7 @@
     },
     {
       "title": "Create Your Own Pizza",
+      "photo": "https://picsum.photos/400/300?random=4",
       "items": [
         "Original Hand Tossed",
         "Gluten-Free",
@@ -40,6 +44,7 @@
     },
     {
       "title": "Specialty Pizzas",
+      "photo": "https://picsum.photos/400/300?random=5",
       "items": [
         "A-1 Steak Pizza",
         "Bacon Cheeseburger Pizza",
@@ -51,6 +56,7 @@
     },
     {
       "title": "Burgers",
+      "photo": "https://picsum.photos/400/300?random=6",
       "items": [
         "Spinner Special Smoked Burger",
         "Radar Burger",
@@ -61,6 +67,7 @@
     },
     {
       "title": "Desserts & Drinks",
+      "photo": "https://picsum.photos/400/300?random=7",
       "items": [
         "Cookies",
         "Fountain Drinks",
