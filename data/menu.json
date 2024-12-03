@@ -1,82 +1,74 @@
 {
-  "title": "~ Welcome to Our All-American Menu ~",
+  "title": "~ Check out our menu ~",
   "sections": [
     {
-      "title": "House Specials",
-      "photo": "https://images.pexels.com/photos/1352270/pexels-photo-1352270.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "items": [
-        "Chicken Alfredo",
-        "Homemade Lasagna",
-        "Fried Fish (Served 7 Days a Week)",
-        "Fried Frog Legs (Served 7 Days a Week)"
-      ]
-    },
-    {
-      "title": "Appetizers",
-      "photo": "https://images.pexels.com/photos/6941027/pexels-photo-6941027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "items": [
-        "Mac 'n Cheese Bacon Nuggets",
-        "Jalapeño Poppers",
-        "Mozzarella Sticks",
-        "Chicken Wings",
-        "Garlic Breadsticks",
-        "Garlic Cheese Bread"
-      ]
-    },
-    {
-      "title": "Salads",
-      "photo": "https://images.pexels.com/photos/806361/pexels-photo-806361.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "items": [
-        "Side Salad",
-        "Chef Salad",
-        "Fajita Chicken Salad",
-        "Taco Salad"
-      ]
-    },
-    {
-      "title": "Create Your Own Pizza",
-      "photo": "https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "items": [
-        "Original Hand Tossed",
-        "Gluten-Free",
-        "Add Your Favorite Toppings"
-      ]
-    },
-    {
       "title": "Specialty Pizzas",
-      "photo": "https://images.pexels.com/photos/26575499/pexels-photo-26575499/free-photo-of-pizza-with-meat-and-vegetables.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "photo": "assets/images/food/chicken-alfredo-pizza.jpg",
       "items": [
+        "Alfredo Chicken Pizza ⭐",
         "A-1 Steak Pizza",
         "Bacon Cheeseburger Pizza",
         "BBQ Chicken Pizza",
         "Hawaiian Pizza",
-        "Cheesy Potato Delight",
-        "Alfredo Chicken Pizza"
+        "Cheesy Potato Delight"
+      ]
+    },
+    {
+      "title": "Create Your Own Pizza",
+      "photo": "assets/images/food/supreme-pizza.jpg",
+      "items": [
+        "Original Hand Tossed ✅",
+        "Gluten-Free ✅",
+        "All your favorite toppings✅"
+      ]
+    },
+    {
+      "title": "House Specials",
+      "photo": "assets/images/food/gyro-seasoned-fries.jpg",
+      "items": [
+        "Gyro with fries ⭐",
+        "Chicken Alfredo",
+        "Homemade Lasagna",
+        "Daily Fried Frog Legs and Fish"
       ]
     },
     {
       "title": "Burgers",
-      "photo": "https://images.pexels.com/photos/19247563/pexels-photo-19247563/free-photo-of-burger-and-french-fries-served-in-a-restaurant.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "photo": "assets/images/food/hoagie-burger-and-fries.jpg",
       "items": [
-        "Hoagie Burgers - All spinners patties rectangular to fit on a hoagie bun",
+        "Hoagie Burgers ⭐",
         "Spinner Special Smoked Burger",
         "Radar Burger",
         "Hawaiian Burger",
         "Big & Wolf Burger"
-        
       ]
     },
     {
-      "title": "Desserts & Drinks",
-      "photo": "https://images.pexels.com/photos/13815328/pexels-photo-13815328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Appetizers",
+      "photo": "assets/images/food/breadsticks.jpg",
       "items": [
-        "Cookies",
-        "Fountain Drinks",
-        "Bottled Beverages"
+        "Garlic Breadsticks ⭐",
+        "Mac 'n Cheese Bacon Nuggets",
+        "Jalapeño Poppers",
+        "Mozzarella Sticks",
+        "Chicken Wings",
+        "Garlic Cheese Bread"
+      ]
+    },
+
+
+    {
+      "title": "Drinks & Desert",
+      "photo": "assets/images/food/drinks.jpg",
+      "items": [
+        "Fountain Drinks ⭐",
+        "Bottled Beverages",
+        "Cookies"
       ]
     }
   ],
-  "note": "★ Famous for Fried Fish & Frog Legs ★",
+  
+  "note": "★ Locally famous for serving frog legs and fish daily ★",
   "images": [
     "https://spinners.pizza/assets/images/menu/menu1.jpg?raw=true",
     "https://spinners.pizza/assets/images/menu/menu2.jpg?raw=true",

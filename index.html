@@ -10,17 +10,20 @@
   <!-- Google Fonts: Lora -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Spinners Pizza - Grovespring Missouri">
-  <meta property="og:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
+  <meta property="og:description"
+    content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta property="og:image" content="https://spinners.pizza/assets/images/background/1.png">
   <meta property="og:url" content="https://spinners.pizza">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Spinners Pizza - Grovespring Missouri">
-  <meta name="twitter:description" content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
+  <meta name="twitter:description"
+    content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta name="twitter:image" content="https://spinners.pizza/assets/images/background/1.png">
   <meta name="apple-mobile-web-app-title" content="Spinner's Pizza">
   <link rel="apple-touch-icon" href="https://spinners.pizza/assets/images/background/1.png">
@@ -29,8 +32,10 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <link rel="icon" type="image/png" href="https://spinners.pizza/assets/images/background/1.png" sizes="192x192">
-  <meta name="description" content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
-  <meta name="keywords" content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
+  <meta name="description"
+    content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
+  <meta name="keywords"
+    content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
   <meta name="author" content="Spinners Pizza">
 
   <!-- Tailwind CSS -->
@@ -84,7 +89,6 @@
       perspective: 1000px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       background-color: #ffffff;
-      border-radius: 0.5rem;
     }
 
     .header {
@@ -92,15 +96,27 @@
     }
 
     .hours-card {
-      background-color: #4488ef;
+      background: linear-gradient(145deg, #4688ee, #366ed6);
+      /* Subtle gradient */
       color: #ffffff;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      max-width: 350px;
+      /* Limit the width for better structure */
+      margin: auto;
+      /* Center the card */
+      font-family: Arial, sans-serif;
+      /* Clean font for readability */
     }
 
     .hours-card h3 {
       border-bottom: 2px solid #3b82f6;
       padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      /* Add space below */
+      font-size: 1.5rem;
+      /* Larger heading for emphasis */
+      text-align: center;
+      /* Center-align the heading */
     }
 
     .hours-card ul {
@@ -110,13 +126,25 @@
     }
 
     .hours-card li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.75rem 1rem;
+      /* Add padding for spacing */
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      /* Softer divider */
+      cursor: pointer;
+      /* Make it feel interactive */
     }
 
     .hours-card li:last-child {
       border-bottom: none;
     }
+
+    .hours-card li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      /* Highlight on hover */
+      transform: scale(1.02);
+      /* Slight enlargement */
+    }
+
 
     .modal-button {
       position: absolute;
@@ -214,7 +242,8 @@
     <div class="container mx-auto flex justify-between items-center p-4 relative">
       <!-- Added Logo Image Next to "Spinners Pizza" -->
       <h1 class="text-xl sm:text-2xl font-bold flex items-center">
-        <img src="https://spinners.pizza/assets/images/logos/1.png" alt="Spinners Pizza Logo" class="h-8 mr-2" onerror="this.onerror=null; this.src='https://picsum.photos/40'">
+        <img src="https://spinners.pizza/assets/images/logos/1.png" alt="Spinners Pizza Logo" class="h-8 mr-2"
+          onerror="this.onerror=null; this.src='https://picsum.photos/40'">
         Spinners Pizza
       </h1>
       <nav>
@@ -249,42 +278,48 @@
   </header>
 
   <!-- Home Section -->
-  <section id="home" class="bg-cover bg-center h-screen relative scroll-mt-16" style="background-image: url('https://spinners.pizza/assets/images/background/current.jpg?raw=true');">
+  <section id="home" class="bg-cover bg-center h-screen relative scroll-mt-16"
+    style="background-image: url('https://spinners.pizza/assets/images/background/current.jpg?raw=true');">
     <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
+    <div
+      class="relative z-10 h-full flex flex-col items-center justify-center text-center text-secondary p-4 px-6 sm:px-12">
       <!-- Outer Red Border -->
       <div class="border-4 border-red-600 rounded-full p-2 animate-rotate">
         <!-- Middle White Border -->
         <div class="border-4 border-white rounded-full p-2">
           <!-- Inner Blue Border (Logo Container) -->
           <div class="border-4 border-tertiary rounded-full">
-            <img src="https://spinners.pizza/assets/images/logos/1.png?raw=true" id="logo" alt="Spinners Pizza Logo" class="h-32 w-32 rounded-full object-cover" onerror="this.onerror=null; this.src='https://picsum.photos/160'">
+            <img src="https://spinners.pizza/assets/images/logos/1.png?raw=true" id="logo" alt="Spinners Pizza Logo"
+              class="h-32 w-32 rounded-full object-cover"
+              onerror="this.onerror=null; this.src='https://picsum.photos/160'">
           </div>
         </div>
       </div>
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-4">Welcome to Spinners Pizza!</h2>
-      <p class="text-lg sm:text-xl mb-6">Grovespring's local pizzeria, BBQ palace, and burger joint—come hang out!</p>
-      <a href="#menu" class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our Menu</a>
+      <p class="text-lg sm:text-xl mb-6">Grovespring Missouri's local pizzeria, BBQ palace, burger join, and more!</p>
+      <a href="#menu"
+        class="bg-primary px-6 py-3 rounded text-lg hover:bg-red-600 transition-colors duration-300">Explore Our
+        Menu</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-12 bg-gray-50 scroll-mt-16">
+  <!-- Discounts Section -->
+  <section id="discounts" class="py-12 bg-primary text-secondary scroll-mt-16">
     <div class="container mx-auto text-center px-6">
-      <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4"></h3>
-      <img id="about-image" src="" class="mx-auto w-1/4 aspect-auto border-4 transition-transform duration-300 transform hover:scale-105 rounded-md cursor-pointer" alt="About Image">
-      <div id="about-paragraphs">
-        <!-- About paragraphs will be inserted here -->
-      </div>
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Discounts for Our Heroes</h3>
+      <p class="text-base sm:text-lg">We honor our service members, police officers, firefighters, and first responders
+        with special discounts as a token of our appreciation.</p>
     </div>
   </section>
+
 
   <!-- Hours and Gallery Section -->
   <section class="py-12 bg-gray-100">
     <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row md:space-x-8">
+      <div id="wrapper_hours_gallery"
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
         <!-- Hours Section (Nested Div with scroll-mt-16) -->
-        <div id="hours" class="md:w-1/3 hours-card p-6 mb-8 md:mb-0 scroll-mt-16">
+        <div id="hours" class="hours-card p-6 mb-8 md:mb-0 scroll-mt-16">
           <h3 id="hours-title" class="text-xl sm:text-2xl font-bold mb-4"></h3>
           <ul id="hours-days" class="text-sm sm:text-base">
             <!-- Hours will be inserted here -->
@@ -295,10 +330,12 @@
         </div>
 
         <!-- Gallery Section (Nested Div with scroll-mt-16) -->
-        <div id="gallery" class="md:w-2/3 bg-tertiary-light p-6 rounded-md shadow-md scroll-mt-16">
-          <h3 class="text-2xl sm:text-3xl font-bold mb-4">Explore Our Space</h3>
+        <div id="gallery" class="p-6 rounded-md scroll-mt-16">
+          <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">Take a spin around our
+            place!</h3>
           <p class="mb-6 text-base sm:text-lg">
-            Take a look inside our cozy and welcoming restaurant—perfect for family meals or a quick bite with friends!
+            Our dining area is clean, date, family, and party friendly! Our amazing staff is always top notch and ready
+            to provide a high quality service experience.
           </p>
           <div id="gallery-images" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- Gallery images will be inserted here with hover zoom effect -->
@@ -308,16 +345,21 @@
     </div>
   </section>
 
+
   <!-- Menu Section -->
-  <section id="menu" class="py-12 bg-tertiary-light scroll-mt-16">
-    <div class="container mx-auto px-6">
-      <h3 id="menu-title" class="text-2xl sm:text-3xl font-bold text-center text-red-600 mb-8"></h3>
-      <div id="menu-sections" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Menu sections will be inserted dynamically -->
-      </div>
-      <div id="menu-note" class="text-center mt-8 text-blue-600 font-bold">
+  <section id="menu" class="py-12 scroll-mt-16 ">
+
+    <div class="container mx-auto px-6 ">
+      <h3 id="menu-title" class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2"></h3>
+      
+      <div id="menu-note" class="text-center mt-8 text-blue-600 font-bold pb-5">
         <!-- Menu note will be inserted here -->
       </div>
+      <div id="menu-sections"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+        <!-- Menu sections will be inserted dynamically -->
+      </div>
+
       <div class="mt-8">
         <div id="menu-images" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           <!-- Menu images will be inserted here with hover zoom effect -->
@@ -326,10 +368,68 @@
     </div>
   </section>
 
+  <!-- Order Section -->
+  <section id="order" class="py-12 scroll-mt-16">
+    <div class="container mx-auto px-6">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">Where we're located</h3>
+      <div class="text-center">
+        <p class="mb-2"><strong>Address: 9537 MO-5, Grovespring, MO 65662</strong></p>
+        <p class="mb-2">For carry-out orders, questions, comments, or concerns, please call <a
+            href="tel:4174627746"><b>(417) 462-7746</b></a>.</p>
+        <div class="w-full h-64 sm:h-96 mt-6">
+          <iframe class="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus"
+            style="border:0;" allowfullscreen="" loading=""></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="py-12 bg-gray-50 scroll-mt-16">
+    <div class="container mx-auto px-6">
+      <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">
+        About Us</h3>
+
+      <!-- Flex container for responsive layout -->
+      <div class="flex flex-col md:flex-row items-center md:items-center md:space-x-6">
+        <!-- Image container -->
+        <div class="w-full md:w-3/10 flex justify-center md:justify-center">
+          <img id="about-image" class="h-auto max-h-[] object-contain" alt="About Image">
+        </div>
+        <!-- Paragraphs container -->
+        <div id="about-paragraphs" class="w-full md:w-7/10 mt-6 md:mt-0 text-center md:text-left">
+          <p class="text-justify text-gray-700 leading-relaxed mb-6">
+            At Spinner's Pizza, we believe every slice tells a story. Founded in 2016 by Tim and Brenda Klein, our
+            restaurant has become a symbol of resilience, community, and passion. Over the years, we've faced challenges
+            like the COVID-19 pandemic and stood strong as a family while supporting our daughter, Shannon Lasure
+            (Klein), in her courageous battle with brain cancer. Shannon, a dedicated chiropractor, continues to inspire
+            us with her strength and determination.
+          </p>
+          <p class="text-justify text-gray-700 leading-relaxed mb-6">
+            Spinner’s Pizza isn’t just a restaurant—it’s part of a rich family legacy. Before founding the current
+            location, Tim and Brenda entrusted the original Spinner's in Stoughton, Wisconsin, to their son Brandon.
+            With Brandon's leadership, the Stoughton location continues to thrive while Tim and Brenda have embarked on
+            an exciting new venture in Missouri: a buffalo farm. Their older son proudly serves in the Marines. This
+            spirit of innovation, hard work, and family unity defines everything we do here at Spinners.
+          </p>
+          <p class="text-justify text-gray-700 leading-relaxed mb-6">
+            Every dish at Spinner's Pizza is crafted with love and dedication. From handcrafted pizzas and custom-made
+            Hoagie Burgers to savory BBQ and indulgent desserts, our menu is packed with mouthwatering options,
+            including one of the largest specialty pizza selections you’ll find.
+          </p>
+          <p class="text-justify text-gray-700 leading-relaxed">
+            We are deeply grateful for the love and support of our community and extend our thoughts and prayers to
+            Shannon, the Lasure family, and the entire Klein family. Together, let’s keep the Spinner's spirit alive and
+            spinning! 🍕❤️
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Reviews Section -->
   <section id="reviews" class="py-12 bg-gray-50 scroll-mt-16">
     <div class="container mx-auto text-center px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Customer Reviews</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">Customer Reviews</h3>
       <p class="text-base sm:text-lg mb-6">Read what our customers have to say!</p>
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
         <div id="review-carousel" class="flex transition-transform duration-1000 ease-in-out">
@@ -338,31 +438,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Discounts Section -->
-  <section id="discounts" class="py-12 bg-primary text-secondary scroll-mt-16">
-    <div class="container mx-auto text-center px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-4">Discounts for Our Heroes</h3>
-      <p class="text-base sm:text-lg">We honor our service members, police officers, firefighters, and first responders with special discounts as a token of our appreciation.</p>
-    </div>
-  </section>
-
-  <!-- Order Section -->
-  <section id="order" class="py-12 bg-white scroll-mt-16">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8">Come on out!</h3>
-      <div class="text-center">
-        <p class="mb-2">Everyone and anyone is welcome here at Spinners!</p>
-        <p class="mb-2">Join us for a delightful dining experience or order for convenient carry-out.</p>
-        <p class="mb-2"><strong>Address:</strong> 9537 MO-5, Grovespring, MO 65662</p>
-        <p class="mb-2">For carry-out orders, questions, comments, or concerns, please call <a href="tel:4174627746"><b>(417) 462-7746</b></a>.</p>
-        <div class="w-full h-64 sm:h-96 mt-6">
-          <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.371964378669!2d-92.60439042413377!3d37.40468217208095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c55157bff0a993%3A0x8bf775b1d6a5af4d!2sSpinners%20Restaurant!5e0!3m2!1sen!2sus!4v1732477221013!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading=""></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer class="bg-gray-800 text-secondary text-center p-4">
     <p>© 2024 Spinners Pizza. All rights reserved.</p>
   </footer>
@@ -372,8 +447,10 @@
     <div class="image-container">
       <button class="modal-button" onclick="closeGalleryModal()">&times;</button>
       <img id="gallery-modal-image" src="" alt="Gallery Modal Image">
-      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-red-600 rounded" onclick="prevGalleryImage()">&lsaquo;</button>
-      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-blue-600 rounded" onclick="nextGalleryImage()">&rsaquo;</button>
+      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-red-600 rounded"
+        onclick="prevGalleryImage()">&lsaquo;</button>
+      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-blue-600 rounded"
+        onclick="nextGalleryImage()">&rsaquo;</button>
     </div>
   </div>
 
@@ -382,8 +459,10 @@
     <div class="image-container">
       <button class="modal-button" onclick="closeMenuModal()">&times;</button>
       <img id="menu-modal-image" src="" alt="Menu Modal Image">
-      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-red-600 rounded" onclick="prevMenuImage()">&lsaquo;</button>
-      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-blue-600 rounded" onclick="nextMenuImage()">&rsaquo;</button>
+      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-red-600 rounded"
+        onclick="prevMenuImage()">&lsaquo;</button>
+      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl p-2 bg-blue-600 rounded"
+        onclick="nextMenuImage()">&rsaquo;</button>
     </div>
   </div>
 
@@ -397,15 +476,15 @@
     // Fetch JSON Data
     async function fetchData() {
       try {
-        const aboutResponse = await fetch('https://spinners.pizza/data/about.json');
+        const aboutResponse = await fetch('data/about.json');
         aboutData = await aboutResponse.json();
-        const hoursResponse = await fetch('https://spinners.pizza/data/hours.json');
+        const hoursResponse = await fetch('data/hours.json');
         hoursData = await hoursResponse.json();
-        const galleryResponse = await fetch('https://spinners.pizza/data/gallery.json');
+        const galleryResponse = await fetch('data/gallery.json');
         galleryData = await galleryResponse.json();
-        const menuResponse = await fetch('https://spinners.pizza/data/menu.json');
+        const menuResponse = await fetch('data/menu.json');
         menuData = await menuResponse.json();
-        const reviewsResponse = await fetch('https://spinners.pizza/data/reviews.json');
+        const reviewsResponse = await fetch('data/reviews.json');
         reviewsData = await reviewsResponse.json();
         populateAboutSection();
         populateHoursSection();
@@ -459,7 +538,7 @@
         // Tailwind classes for hover zoom
         img.className = 'cursor-pointer rounded-md transition-transform duration-300 transform hover:scale-105';
         img.onclick = () => openGalleryModal(index);
-        img.onerror = function() {
+        img.onerror = function () {
           this.onerror = null;
           this.src = `https://picsum.photos/600/400?random=${index + 20}`;
         };
