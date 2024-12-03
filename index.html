@@ -16,14 +16,14 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Spinners Pizza - Grovespring Missouri">
   <meta property="og:description"
-    content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
+    content="For delicious pizzas, bbq, burgers, and more! Call Spinners today at (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta property="og:image" content="https://spinners.pizza/assets/images/background/1.png">
   <meta property="og:url" content="https://spinners.pizza">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Spinners Pizza - Grovespring Missouri">
   <meta name="twitter:description"
-    content="Delicious pizzas, mouth-watering wings, and more! Call (417) 462-7746 to place an order for Delivery or Carry-out.">
+    content="For delicious pizzas, bbq, burgers, and more! Call Spinners today at (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta name="twitter:image" content="https://spinners.pizza/assets/images/background/1.png">
   <meta name="apple-mobile-web-app-title" content="Spinner's Pizza">
   <link rel="apple-touch-icon" href="https://spinners.pizza/assets/images/background/1.png">
@@ -33,9 +33,9 @@
   <meta property="og:image:height" content="630">
   <link rel="icon" type="image/png" href="https://spinners.pizza/assets/images/background/1.png" sizes="192x192">
   <meta name="description"
-    content="Spinner's Pizza offers a variety of delicious pizzas, BBQ, and burgers in Grovespring, MO. Experience great food and service!">
+    content="For delicious pizzas, bbq, burgers, and more! Call Spinners today at (417) 462-7746 to place an order for Delivery or Carry-out.">
   <meta name="keywords"
-    content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me">
+    content="pizza, restaurant, Spinners Pizza, Grovespring, delicious pizzas, BBQ, burgers, family-friendly, local restaurants near me, missouri">
   <meta name="author" content="Spinners Pizza">
 
   <!-- Tailwind CSS -->
@@ -313,13 +313,13 @@
   </section>
 
 
-  <!-- Hours and Gallery Section -->
-  <section class="py-12 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <div id="wrapper_hours_gallery"
-        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
-        <!-- Hours Section (Nested Div with scroll-mt-16) -->
-        <div id="hours" class="hours-card p-6 mb-8 md:mb-0 scroll-mt-16">
+<!-- Hours and Gallery Section -->
+<section class="py-12 bg-gray-100">
+  <div class="container mx-auto px-6">
+    <div id="wrapper_hours_gallery" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+      <!-- Hours Section (Centered with Flexbox) -->
+      <div id="hours" class="flex items-center justify-center p-6 mb-8 md:mb-0 scroll-mt-16">
+        <div class="hours-card text-center">
           <h3 id="hours-title" class="text-xl sm:text-2xl font-bold mb-4"></h3>
           <ul id="hours-days" class="text-sm sm:text-base">
             <!-- Hours will be inserted here -->
@@ -328,22 +328,24 @@
             <!-- Notes will be inserted here -->
           </div>
         </div>
+      </div>
 
-        <!-- Gallery Section (Nested Div with scroll-mt-16) -->
-        <div id="gallery" class="p-6 rounded-md scroll-mt-16">
-          <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">Take a spin around our
-            place!</h3>
-          <p class="mb-6 text-base sm:text-lg">
-            Our dining area is clean, date, family, and party friendly! Our amazing staff is always top notch and ready
-            to provide a high quality service experience.
-          </p>
-          <div id="gallery-images" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Gallery images will be inserted here with hover zoom effect -->
-          </div>
+      <!-- Gallery Section -->
+      <div id="gallery" class="p-6 rounded-md scroll-mt-16">
+        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">Take a spin around our
+          place!</h3>
+        <p class="mb-6 text-base sm:text-lg">
+          Our dining area is clean, date, family, and party friendly! Our amazing staff is always top notch and ready
+          to provide a high quality service experience.
+        </p>
+        <div id="gallery-images" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Gallery images will be inserted here with hover zoom effect -->
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
   <!-- Menu Section -->
@@ -384,7 +386,7 @@
       </div>
     </div>
   </section>
-  <section id="about" class="py-12 bg-gray-50 scroll-mt-16">
+  <section id="about" class="py-12 scroll-mt-16">
     <div class="container mx-auto px-6">
       <h3 id="about-title" class="text-2xl sm:text-3xl font-bold mb-4 text-center bg-red-500 text-white py-2">
         About Us</h3>
